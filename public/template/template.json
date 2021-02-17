@@ -1,0 +1,68 @@
+{
+    "config": {
+        "title": "example glossary",
+        "siteName": "example glossary",
+        "logo": "media/teste/img (1).jpg",
+        "globalStyle": {
+            "backgroundColor": "red"
+        }
+    },
+    "components": {
+        "header": {
+            "style": {
+                "backgroundColor": "red"
+            },
+            "nav": {
+                "title": "titulo do site",
+                "links": [
+                    {"text":"teste","href":"/teste"},
+                    {"text":"teste","href":"/teste"},
+                    {"text":"teste","href":"/teste"},
+                    {"text":"teste","href":"/teste"}
+                ]
+            }
+        },
+        "aboveTheFold": {
+            "style": {
+                "backgroundColor": "blue"
+            },
+            "component": {
+                "slideshow": {
+                    "lead": [
+                        {
+                            "title":"teste",
+                            "subtitle":"teste",
+                            "imgPath":"media/teste/img (1).jpg",
+                            "style": {}
+                        },
+                        {
+                            "title":"teste",
+                            "subtitle":"teste",
+                            "imgPath":"media/teste/img (2).jpg",
+                            "style": {}
+                        },
+                        {
+                            "title":"teste",
+                            "subtitle":"teste",
+                            "imgPath":"media/teste/img (3).jpg",
+                            "style": {}
+                        }
+                    ]
+                }
+            }
+        },
+        "mainContent": {
+            "style": {
+                "backgroundColor": "red"
+            }
+        },
+        "footer": {
+            "style": {
+                "backgroundColor": "purple"
+            },
+            "content": {
+                "title":"teste"
+            }
+        }
+    }
+}
