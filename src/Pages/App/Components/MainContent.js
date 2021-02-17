@@ -10,10 +10,15 @@ class MainContent extends React.Component {
     }
     
     render() {
+        const config = this.state.config
+        const globalConfig = this.props.globalConfig
+
         return (
-            <div>
-                <h1>asdasd</h1>
-            </div>
+            <main id="MainContent" style={config.style}>
+                {config.components.map((component, key) => {
+                    return <h1 key={key}>dasdds</h1>
+                })}
+            </main>
         )
     }
 }

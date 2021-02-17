@@ -9,6 +9,21 @@ class Header extends React.Component {
         }
     }
 
+    componentDidMount() {
+        if (this.state.config.nav.hideOnScroll) {
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("header").style.top = "0";
+                } else {
+                    document.getElementById("header").style.top = "-500px";
+                }
+                prevScrollpos = currentScrollPos;
+            }
+        }
+    }
+
     render() {
         const config = this.state.config
         const globalConfig = this.props.globalConfig
@@ -17,11 +32,9 @@ class Header extends React.Component {
             <header id="header" style={config.style}>
                 <h1>{config.nav.title}</h1>
                 <nav>
-                    <ul>
-                        {config.nav.links.map((link,key) => (
-                            <li key={key}><a href={link.href}>{link.text}</a></li>
-                            ))}
-                    </ul>
+                    {config.nav.links.map((link,key) => (
+                        <a key={key} href={link.href}>{link.text}</a>
+                    ))}
                 </nav>
             </header>
         )

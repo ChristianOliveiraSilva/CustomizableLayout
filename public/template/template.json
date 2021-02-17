@@ -1,7 +1,7 @@
 {
     "config": {
-        "title": "example glossary",
-        "siteName": "example glossary",
+        "title": "Aline Moura",
+        "siteName": "Aline Moura",
         "logo": "media/teste/img (1).jpg",
         "globalStyle": {
             "backgroundColor": "red"
@@ -14,6 +14,7 @@
             },
             "nav": {
                 "title": "titulo do site",
+                "hideOnScroll": true,
                 "links": [
                     {"text":"teste","href":"/teste"},
                     {"text":"teste","href":"/teste"},
@@ -54,14 +55,21 @@
         "mainContent": {
             "style": {
                 "backgroundColor": "red"
-            }
+            },
+            "components":[
+                {"type": ""}
+            ]
         },
         "footer": {
             "style": {
                 "backgroundColor": "purple"
             },
             "content": {
-                "title":"teste"
+                "text1":"adada",
+                "text2":"asdasd",
+                "text3":"asdasd",
+                "text4":"asdasd",
+                "text5":"adadsd"
             }
         }
     }
