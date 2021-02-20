@@ -1,0 +1,42 @@
+.main-container-testimonials {
+    max-width: 998px;
+    background-color: white;
+    margin: 0px auto;
+}
+
+.container-testimonials {
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px auto;
+    width: 95%;
+  }
+  
+.container-testimonials::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container-testimonials img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+    height: 80px;
+}
+
+.container-testimonials span {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+@media (max-width: 500px) {
+    .container-testimonials {
+        text-align: center;
+    }
+
+    .container-testimonials img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+}

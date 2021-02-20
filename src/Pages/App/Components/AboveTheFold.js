@@ -1,5 +1,10 @@
 import React from 'react';
 
+import PortfolioGallery from "./MicroComponents/PortfolioGallery";
+import SlideshowGallery from "./MicroComponents/SlideshowGallery";
+import Tabs from "./MicroComponents/Tabs";
+import Testimonials from "./MicroComponents/Testimonials";
+
 class AboveTheFold extends React.Component {
 
     constructor(props) {
@@ -7,10 +12,6 @@ class AboveTheFold extends React.Component {
         this.state = {
             config: props.config
         }
-    }
-
-    componentDidMount() {
-        
     }
     
     render() {

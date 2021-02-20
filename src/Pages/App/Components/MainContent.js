@@ -1,5 +1,10 @@
 import React from 'react';
 
+import PortfolioGallery from './MicroComponents/PortfolioGallery'
+import SlideshowGallery from './MicroComponents/SlideshowGallery'
+import Tabs from './MicroComponents/Tabs'
+import Testimonials from './MicroComponents/Testimonials'
+
 class MainContent extends React.Component {
 
     constructor(props) {
@@ -18,6 +23,11 @@ class MainContent extends React.Component {
                 {config.components.map((component, key) => {
                     return <h1 key={key}>dasdds</h1>
                 })}
+                <PortfolioGallery />
+                <SlideshowGallery />
+                <Tabs />
+                <Testimonials />
+                este component ainda está em teste
             </main>
         )
     }

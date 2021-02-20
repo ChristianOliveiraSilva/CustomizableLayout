@@ -10,4 +10,4 @@
 
 ## FROM ME:
 
-* SQUEZE
+* Squeeze
