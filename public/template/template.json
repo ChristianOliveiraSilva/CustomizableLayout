@@ -34,7 +34,7 @@
                             "title":"teste",
                             "subtitle":"teste",
                             "imgPath":"media/teste/img (1).jpg",
-                            "style": {}
+                            "style": {"backgroundColor":"red"}
                         },
                         {
                             "title":"teste",
