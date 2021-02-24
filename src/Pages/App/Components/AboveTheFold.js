@@ -1,37 +1,54 @@
 import React from 'react';
 
-import PortfolioGallery from "./MicroComponents/PortfolioGallery";
-import SlideshowGallery from "./MicroComponents/SlideshowGallery";
-import Tabs from "./MicroComponents/Tabs";
-import Testimonials from "./MicroComponents/Testimonials";
-
 class AboveTheFold extends React.Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            config: props.config,
-            slide: 0
+            slide: 0,
+            intervalID: null
         }
 
         this.plusSlides = this.plusSlides.bind(this)
         this.currentSlide = this.currentSlide.bind(this)
     }
 
+    componentDidMount(){
+        setInterval(() => this.plusSlides(1), 4000)
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.state.intervalID)
+    }
+
     plusSlides(n) {
-        this.setState({
-            slide: this.state.slide + n
-        });
+        const slide = this.state.slide + n
+        const maxSize = this.props.config.component.slideshow.lead.length - 1
+
+        if (slide >= 0 && slide <= maxSize) {
+            this.setState({
+                slide: slide
+            })
+        } else {
+            this.setState({
+                slide: 0
+            })
+        }
     }
     
     currentSlide(n) {
-        this.setState({
-            slide: n
-        });
+        const slide = n
+        const maxSize = this.props.config.component.slideshow.lead.length - 1
+
+        if (slide >= 0 && slide <= maxSize) {
+            this.setState({
+                slide: slide
+            });
+        }
     }
     
     render() {
-        const config = this.state.config
+        const config = this.props.config
         const globalConfig = this.props.globalConfig
 
         return (
@@ -40,12 +57,13 @@ class AboveTheFold extends React.Component {
                     { config.component.slideshow.lead.map((page,key) =>{
                         const {title, subtitle, imgPath, style} = page
                         const show = this.state.slide == key ? {display: 'block'} : {}
-                        console.log(style, show);
+                        const description = `${title} ${subtitle}`
+
                         return (
                             <div key={key} style={style, show} className="mySlides fade">
-                                <div className="numbertext">{key+1} / 3</div>
-                                <img src={imgPath} style={{width: '100%'}} />
-                                <div className="text">{`${title} ${subtitle}`}</div>
+                                <div className="numbertext">{key+1} / {config.component.slideshow.lead.length}</div>
+                                <img src={imgPath} alt={description} title={description} />
+                                <div className="text" title={description}>{description}</div>
                             </div>
                         )
                     }) }
@@ -54,10 +72,10 @@ class AboveTheFold extends React.Component {
                     <a className="next" onClick={() => this.plusSlides(1)}>&#10095;</a>
                 </div>
 
-                <div style={{textAlign:'center'}}>
+                <div className="dots" style={{textAlign:'center', zIndex:'2'}}>
+                    <span className="dot" onClick={() => this.currentSlide(0)}></span>
                     <span className="dot" onClick={() => this.currentSlide(1)}></span>
                     <span className="dot" onClick={() => this.currentSlide(2)}></span>
-                    <span className="dot" onClick={() => this.currentSlide(3)}></span>
                 </div>
             </section>
         )

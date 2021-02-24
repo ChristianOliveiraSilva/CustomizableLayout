@@ -4,28 +4,25 @@
         "siteName": "Aline Moura",
         "logo": "media/teste/img (1).jpg",
         "globalStyle": {
-            "backgroundColor": "red"
         }
     },
     "components": {
         "header": {
             "style": {
-                "backgroundColor": "red"
             },
             "nav": {
-                "title": "titulo do site",
+                "title": "Aline Moura",
                 "hideOnScroll": true,
                 "links": [
-                    {"text":"teste","href":"/teste"},
-                    {"text":"teste","href":"/teste"},
-                    {"text":"teste","href":"/teste"},
-                    {"text":"teste","href":"/teste"}
+                    {"text":"Portfolio Gallery","href":"#PortfolioGallery"},
+                    {"text":"Slideshow Gallery","href":"#SlideshowGallery"},
+                    {"text":"Tabs","href":"#Tabs"},
+                    {"text":"Testimonials","href":"#Testimonials"}
                 ]
             }
         },
         "aboveTheFold": {
             "style": {
-                "backgroundColor": "blue"
             },
             "component": {
                 "slideshow": {
@@ -34,12 +31,12 @@
                             "title":"teste",
                             "subtitle":"teste",
                             "imgPath":"media/teste/img (1).jpg",
-                            "style": {"backgroundColor":"red"}
+                            "style": {}
                         },
                         {
                             "title":"teste",
                             "subtitle":"teste",
-                            "imgPath":"media/teste/img (2).jpg",
+                            "imgPath":"media/teste/img (62).jpg",
                             "style": {}
                         },
                         {
@@ -54,15 +51,45 @@
         },
         "mainContent": {
             "style": {
-                "backgroundColor": "red"
             },
             "components":[
-                
+                {
+                    "type":"PortfolioGallery",
+                    "style": {},
+                    "title": "Aline Moura",
+                    "subtitle": "teste",
+                    "gridItens": [
+                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
+                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
+                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
+                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
+                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
+                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
+                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
+                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
+                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
+                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
+                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
+                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"}
+                    ]
+                },
+                {
+                    "type": "SlideshowGallery",
+                    "style": {},
+                    "caption": "text"
+                },
+                {
+                    "type": "Tabs",
+                    "style": {}
+                },
+                {
+                    "type": "Testimonials",
+                    "style": {}
+                }
             ]
         },
         "footer": {
             "style": {
-                "backgroundColor": "purple"
             },
             "content": {
                 "text1":"adada",

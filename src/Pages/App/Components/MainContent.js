@@ -9,24 +9,19 @@ class MainContent extends React.Component {
 
     constructor(props) {
         super(props)
-        this.state = {
-            config: props.config
-        }
+        this.state = {}
     }
     
     render() {
-        const config = this.state.config
+        const config = this.props.config
         const globalConfig = this.props.globalConfig
 
         return (
             <main id="MainContent" style={config.style}>
-                {config.components.map((component, key) => {
-                    return <h1 key={key}>dasdds</h1>
-                })}
-                <PortfolioGallery />
-                <SlideshowGallery />
-                <Tabs />
-                <Testimonials />
+                <PortfolioGallery config={config.components[0]}/>
+                <SlideshowGallery config={config.components[1]}/>
+                <Tabs config={config.components[2]}/>
+                <Testimonials config={config.components[3]}/>
                 este component ainda está em teste
             </main>
         )

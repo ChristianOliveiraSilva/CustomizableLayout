@@ -5,7 +5,12 @@
 /* Center website */
 .main-portfolio {
     max-width: 1000px;
-    margin: auto;
+    margin: 12px auto;
+}
+.main-portfolio h1.title-portfolio,
+.main-portfolio h3.title-portfolio,
+.main-portfolio h2.title-portfolio {
+    text-align: center;
 }
 
 .row-portfolio {

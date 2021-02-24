@@ -1,0 +1,110 @@
+/* Bordered form */
+form.login {
+    border: 3px solid #f1f1f1;
+}
+
+section.login {
+    display: block;
+    margin: 10px auto;
+    max-width: 700px;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+width: 100%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button.login {
+background-color: #4CAF50;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button.login:hover {
+opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+width: auto;
+padding: 10px 18px;
+background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+text-align: center;
+margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+width: 40%;
+border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container-login {
+padding: 16px;
+}
+
+.error-system {
+    background-color: red;
+    color: white;
+    font-size: 4em;
+}
+
+
+
+.sidenav {
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    cursor: pointer;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main-admin-content {
+    margin-left: 260px;
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media (max-width: 700px) {
+    .sidenav {
+        width: 0px;
+        padding-top: 15px;
+    }
+    .main-admin-content {
+        margin-left: 0px;
+    }
+    .sidenav a {font-size: 18px;}
+}

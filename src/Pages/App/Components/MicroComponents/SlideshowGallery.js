@@ -2,8 +2,10 @@
 import "./Style/SlideshowGallery.css";
 
 function Base(props) {
+    const config = props.config
+
     return (
-        <div className="container-slideshow">
+        <div style={config.style} className="container-slideshow">
             <div className="mySlides-slideshow active-slideshow">
                 <div className="numbertext-slideshow">1 / 6</div>
                 <img src="media/teste/img (10).jpg" style={{width:'100%'}} />
@@ -38,7 +40,7 @@ function Base(props) {
             <a className="next-slideshow" onclick="plusSlides(1)">&#10095;</a>
 
             <div className="caption-slideshow-container">
-                <p id="caption"></p>
+                <p id="caption">{config.caption}</p>
             </div>
 
             <div className="row-slideshow">
@@ -46,7 +48,7 @@ function Base(props) {
                     <img className="demo-slideshow cursor-slideshow" src="media/teste/img (16).jpg" style={{width:'100%'}} onclick="currentSlide(1)" alt="The Woods" />
                 </div>
                 <div className="column-slideshow">
-                    <img className="demo-slideshow cursor-slideshow" src="media/teste/img (17).jpg" style={{width:'100%'}} onclick="currentSlide(2)" alt="Cinque Terre" />
+                    <img className="demo-slideshow cursor-slideshow" src="media/teste/img (16).jpg" style={{width:'100%'}} onclick="currentSlide(2)" alt="Cinque Terre" />
                 </div>
                 <div className="column-slideshow">
                     <img className="demo-slideshow cursor-slideshow" src="media/teste/img (18).jpg" style={{width:'100%'}} onclick="currentSlide(3)" alt="Mountains and fjords" />
