@@ -10,7 +10,7 @@ class Base extends React.Component {
     render() {
         return (
             <section>
-                
+                <h2>dasdsad</h2>
             </section>
         )
     }
