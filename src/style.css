@@ -175,5 +175,7 @@ section#AboveTheFold {
 
 
 footer#footer {
-    padding: 10px;
+  padding: 10px;
+  padding-top: 30px;
+  background-color: #333; 
 }

@@ -1,7 +1,11 @@
 .main-container-testimonials {
     max-width: 998px;
     background-color: white;
-    margin: 0px auto;
+    margin: 30px auto 10px;
+}
+
+.main-title-testimonials {
+    text-align: right;
 }
 
 .container-testimonials {
@@ -30,6 +34,11 @@
 }
 
 @media (max-width: 500px) {
+
+    .main-title-testimonials {
+        text-align: center;
+    }
+
     .container-testimonials {
         text-align: center;
     }

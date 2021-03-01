@@ -17,15 +17,22 @@ class Footer extends React.Component {
             <footer id="footer" className="container" style={config.style}>
                 <div className="row">
                     <div className="col">
-                        <h1>{globalConfig.siteName}</h1>
                         <img src={globalConfig.logo} alt={globalConfig.siteName} width="180"/>
+                        <h3 className="text-center">{globalConfig.siteName}</h3>
                     </div>
                     <div className="col">
-                        <h3>{config.content.text1}</h3>
-                        <h3>{config.content.text2}</h3>
-                        <h3>{config.content.text3}</h3>
-                        <h3>{config.content.text4}</h3>
-                        <h3>{config.content.text5}</h3>
+                        <p>{config.content.text1}</p>
+                        <p>{config.content.text2}</p>
+                        <p>{config.content.text3}</p>
+                        <p>{config.content.text4}</p>
+                        <p>{config.content.text5}</p>
+                    </div>
+                    <div className="col">
+                        <p>{config.content.text1}</p>
+                        <p>{config.content.text2}</p>
+                        <p>{config.content.text3}</p>
+                        <p>{config.content.text4}</p>
+                        <p>{config.content.text5}</p>
                     </div>
                 </div>
             </footer>

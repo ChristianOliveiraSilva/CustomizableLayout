@@ -80,10 +80,20 @@
                 },
                 {
                     "type": "Tabs",
+                    "content": [
+                        {"title":"teste 1", "text":"texto 1", "style": {}},
+                        {"title":"teste 2", "text":"texto 2", "style": {}},
+                        {"title":"teste 3", "text":"texto 3", "style": {}}
+                    ],
                     "style": {}
                 },
                 {
                     "type": "Testimonials",
+                    "content": [
+                        {"name":"teste 1","img":"/media/teste/avatar.png", "text":"texto 1", "style": {}},
+                        {"name":"teste 2","img":"/media/teste/avatar.png", "text":"texto 2", "style": {}},
+                        {"name":"teste 3","img":"/media/teste/avatar.png", "text":"texto 3", "style": {}}
+                    ],
                     "style": {}
                 }
             ]
@@ -92,11 +102,11 @@
             "style": {
             },
             "content": {
-                "text1":"adada",
-                "text2":"asdasd",
-                "text3":"asdasd",
-                "text4":"asdasd",
-                "text5":"adadsd"
+                "text1":"teste",
+                "text2":"teste",
+                "text3":"teste",
+                "text4":"teste",
+                "text5":"teste"
             }
         }
     }

@@ -22,7 +22,6 @@ class MainContent extends React.Component {
                 <SlideshowGallery config={config.components[1]}/>
                 <Tabs config={config.components[2]}/>
                 <Testimonials config={config.components[3]}/>
-                este component ainda está em teste
             </main>
         )
     }

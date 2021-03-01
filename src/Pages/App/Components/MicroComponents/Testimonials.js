@@ -2,19 +2,19 @@
 import "./Style/Testimonials.css";
 
 function Base(props) {
+    const config = props.config
+    const content = config.content
     return (
         <section className="main-container-testimonials">
-            <div className="container-testimonials">
-                <img src="/media/teste/img (25).jpg" alt="Avatar" style={{width:'90px'}} />
-                <p><span>Chris Fox.</span> CEO at Mighty Schools.</p>
-                <p>John Doe saved us from a web disaster.</p>
-            </div>
-            
-            <div className="container-testimonials">
-                <img src="/media/teste/img (26).jpg" alt="Avatar" style={{width:'90px'}} />
-                <p><span >Rebecca Flex.</span> CEO at Company.</p>
-                <p>No one is better than John Doe.</p>
-            </div>
+            <h1 className="main-title-testimonials">Mensagens de nossos clientes</h1>
+            {content.map((item, key) => (
+                <div key={key} className="container-testimonials" style={item.style}>
+                    <img src={item.img} alt="Avatar" style={{width:'80px'}} />
+                    <h3>{item.name}</h3>
+                    <p>{item.text}</p>
+                </div>
+            )
+            )}
         </section> 
     )
 }
