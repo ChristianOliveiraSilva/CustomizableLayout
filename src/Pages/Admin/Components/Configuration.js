@@ -5,13 +5,14 @@ import Header from "./Header";
 import Content from "./Content";
 import Footer from "./Footer";
 
-class Login extends React.Component {
+class Configuration extends React.Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            content: 0
+            content: 2
         }
+
         this.pages = [
             General,
             Header,
@@ -35,7 +36,7 @@ class Login extends React.Component {
         const WrappedContent = this.pages[this.state.content]
 
         return (
-            <section>
+            <section id="admin-system">
                 <div className="sidenav">
                     <a onClick={() => this.changeContent(0)}>Configurações Genéricas</a>
                     <a onClick={() => this.changeContent(1)}>Cabeçalho</a>
@@ -51,4 +52,4 @@ class Login extends React.Component {
     }
 
 }
-export default Login
+export default Configuration

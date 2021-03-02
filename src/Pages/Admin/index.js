@@ -36,7 +36,7 @@ class Admin extends React.Component {
         if (this.state.logged) { 
             return <Login changeLoggedState={this.authenticate}/>
         }
-        if (this.state.error == '') {
+        if (this.state.error == '' && Object.values(this.state.template).length !== 0) {
             return <Configuration template={this.state.template} />
         }
         return <h1 className="error-system">{this.state.error}</h1>

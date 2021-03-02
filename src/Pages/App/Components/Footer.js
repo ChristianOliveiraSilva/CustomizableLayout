@@ -28,11 +28,11 @@ class Footer extends React.Component {
                         <p>{config.content.text5}</p>
                     </div>
                     <div className="col">
-                        <p>{config.content.text1}</p>
-                        <p>{config.content.text2}</p>
-                        <p>{config.content.text3}</p>
-                        <p>{config.content.text4}</p>
-                        <p>{config.content.text5}</p>
+                        <p>{config.content.text6}</p>
+                        <p>{config.content.text7}</p>
+                        <p>{config.content.text8}</p>
+                        <p>{config.content.text9}</p>
+                        <p>{config.content.text10}</p>
                     </div>
                 </div>
             </footer>

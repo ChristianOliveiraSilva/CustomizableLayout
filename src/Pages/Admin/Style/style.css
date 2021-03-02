@@ -10,13 +10,14 @@ section.login {
 }
 
 /* Full-width inputs */
-input[type=text], input[type=password] {
-width: 100%;
-padding: 12px 20px;
-margin: 8px 0;
-display: inline-block;
-border: 1px solid #ccc;
-box-sizing: border-box;
+section.login input[type=text],
+section.login input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 /* Set a style for all buttons */
@@ -28,6 +29,16 @@ margin: 8px 0;
 border: none;
 cursor: pointer;
 width: 100%;
+}
+
+.muted {
+    color: #ccc;
+}
+
+.bordered {
+    border: 1px solid;
+    margin: 5px 0px;
+    padding: 5px;
 }
 
 /* Add a hover effect for buttons */
@@ -66,7 +77,6 @@ padding: 16px;
 }
 
 
-
 .sidenav {
     height: 100%;
     width: 260px;
@@ -94,7 +104,6 @@ padding: 16px;
 
 .main-admin-content {
     margin-left: 260px;
-    font-size: 28px; /* Increased text to enable scrolling */
     padding: 0px 10px;
 }
 
@@ -107,4 +116,44 @@ padding: 16px;
         margin-left: 0px;
     }
     .sidenav a {font-size: 18px;}
+}
+
+section#admin-system h1 {
+    font-size: 2em;
+}
+
+section#admin-system input:not([type=checkbox]) {
+    width: 100%;
+    padding: 6px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #aaa;
+}
+
+section#admin-system input[type=checkbox] {
+    display: inline-block;
+    margin-left: 15px;
+    text-align: left;
+    border: 0;
+}
+
+section#admin-system button.btn-submit {
+    padding: 16px;
+    margin: 8px 0;
+    background-color: rgb(0, 180, 0);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: 0;
+}
+
+section#admin-system table {
+    margin: 18px 0px 0px;
+}
+
+section#admin-system img.img-show {
+    max-width: 400px;
+    padding: 2px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
 }
