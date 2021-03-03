@@ -21,8 +21,8 @@
                         "href": "#SlideshowGallery"
                     },
                     {
-                        "text": "Tabs",
-                        "href": "#Tabs"
+                        "text": "Accordion",
+                        "href": "#Accordion"
                     },
                     {
                         "text": "Testimonials",
@@ -135,22 +135,22 @@
                     "caption": "text"
                 },
                 {
-                    "type": "Tabs",
+                    "type": "Accordion",
                     "content": [
                         {
-                            "title": "teste 1",
-                            "text": "texto 1",
-                            "style": {}
+                            "question": "Como podemos te ajudar?",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo.",
+                            "style": {"textAlign":"justify"}
                         },
                         {
-                            "title": "teste 2",
-                            "text": "texto 2",
-                            "style": {}
+                            "question": "O que precisas?",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo.",
+                            "style": {"textAlign":"justify"}
                         },
                         {
-                            "title": "teste 3",
-                            "text": "texto 3",
-                            "style": {}
+                            "question": "O que queres saber?",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo.",
+                            "style": {"textAlign":"justify"}
                         }
                     ],
                     "style": {}
@@ -159,21 +159,24 @@
                     "type": "Testimonials",
                     "content": [
                         {
-                            "name": "teste 1",
+                            "name": "nome 1",
                             "img": "/media/teste/avatar.png",
-                            "text": "texto 1",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. 1",
+                            "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo",
                             "style": {}
                         },
                         {
-                            "name": "teste 2",
+                            "name": "nome 2",
                             "img": "/media/teste/avatar.png",
-                            "text": "texto 2",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. 2",
+                            "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo",
                             "style": {}
                         },
                         {
-                            "name": "teste 3",
+                            "name": "nome 3",
                             "img": "/media/teste/avatar.png",
                             "text": "texto 3",
+                            "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo",
                             "style": {}
                         }
                     ],

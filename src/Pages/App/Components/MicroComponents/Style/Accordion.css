@@ -1,0 +1,28 @@
+section#Accordion{
+    display: block;
+    margin: 50px auto;
+    width: 70%;
+}
+
+.accordion {
+    color: #444444;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 1.1em;
+}
+
+.accordion:hover {
+    background-color: #ccc;
+}
+  
+.panel {
+    padding: 0px 18px;
+    color: #444;
+    overflow: hidden;
+    font-size: 0.9em;
+}
