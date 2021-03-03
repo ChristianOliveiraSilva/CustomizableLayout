@@ -30,24 +30,24 @@ class Tabs extends React.Component {
                 </div>
                 
                 {this.state.show == 0 &&
-                <div className="tabcontent" style={config.content[0].style}>
-                    <h3>{config.content[0].title}</h3>
-                    <p>{config.content[1].text}</p>
-                </div>
+                    <div className="tabcontent" style={config.content[0].style}>
+                        <h3>{config.content[0].title}</h3>
+                        <p>{config.content[1].text}</p>
+                    </div>
                 }
                 
                 {this.state.show == 1 &&
-                <div className="tabcontent" style={config.content[1].style}>
-                    <h3>{config.content[1].title}</h3>
-                    <p>{config.content[1].text}</p>
-                </div>
+                    <div className="tabcontent" style={config.content[1].style}>
+                        <h3>{config.content[1].title}</h3>
+                        <p>{config.content[1].text}</p>
+                    </div>
                 }
 
                 {this.state.show == 2 &&
-                <div className="tabcontent" style={config.content[2].style}>
-                    <h3>{config.content[2].title}</h3>
-                    <p>{config.content[1].text}</p>
-                </div>
+                    <div className="tabcontent" style={config.content[2].style}>
+                        <h3>{config.content[2].title}</h3>
+                        <p>{config.content[1].text}</p>
+                    </div>
                 }
             </section>
         )
