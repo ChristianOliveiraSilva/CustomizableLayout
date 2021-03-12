@@ -151,9 +151,42 @@ section#admin-system table {
     margin: 18px 0px 0px;
 }
 
+section#admin-system .container {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+section#admin-system .container:hover .img-show {
+    opacity: 0.3;
+}
+  
+section#admin-system .container:hover .middle {
+    opacity: 1;
+}
+
 section#admin-system img.img-show {
     max-width: 400px;
     padding: 2px;
     border-radius: 10px;
     border: 1px solid #ccc;
+    opacity: 1;
+    transition: .5s ease;
+    cursor: pointer;
+    backface-visibility: hidden;
+}
+
+section#admin-system .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    left: 200px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+section#admin-system input[type=file] {
+    display: none;
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import UploadableMedia from "./UploadableMedia";
 
 class Base extends React.Component {
 
@@ -43,7 +44,7 @@ class Base extends React.Component {
                 {
                     this.state.components[0].content.map((item, key) => (
                         <div key={key} className="bordered">
-                            <img src={item.img} className="img-show"/><br/>
+                            <UploadableMedia img={item.img} item={key} />
                             
                             <label>Título desta Imagem</label>
                             <input type="text" placeholder="Título da IMG" name="Title" value={this.state.components[0].subtitle} onChange={this.changeInput} />

@@ -4,7 +4,6 @@ var fs = require('fs');
 const isDev = true
 const filePath = isDev ? '../public/template/template.json' : '../build/template/template.json'  
 
-
 http.createServer(function (req, res) {
     console.log(req.url);
     try {

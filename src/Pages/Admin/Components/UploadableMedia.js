@@ -5,29 +5,28 @@ class Base extends React.Component {
     constructor(props) {
         super(props)
         
+        this.item = props.item
+        this.id = Math.floor(Math.random() * 90000) + 1
         this.state = {
-            img: '',
+            img: props.img,
         }
 
         this.changeInput = this.changeInput.bind(this)
     }
 
     changeInput (event) {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
-    
-        this.setState({
-          [name]: value
-        });
+        alert()
     }
 
     render() {
+        const prefix = 'file'+this.id
         return (
-            <section>
-                <label>Esconder menu ao rolar na Página?</label>
-                <input type="checkbox" name="hideOnScroll" value={this.state.hideOnScroll} onChange={this.changeInput} />
-                <button className="btn-submit">Salvar</button>
+            <section className="container">
+                <label htmlFor={prefix}>
+                    <img src={this.state.img} className="img-show" title="Selecione um arquivo"/>
+                </label>
+                <span className="middle">Selecione um arquivo</span>
+                <input type="file" id={prefix} name={prefix} onChange={this.changeInput}/>
             </section>
         )
     }

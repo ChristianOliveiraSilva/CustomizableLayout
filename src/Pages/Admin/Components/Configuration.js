@@ -17,7 +17,7 @@ class Configuration extends React.Component {
             General,
             Header,
             Content,
-            Footer
+            Footer,
         ]
         this.changeContent = this.changeContent.bind(this)
     }
