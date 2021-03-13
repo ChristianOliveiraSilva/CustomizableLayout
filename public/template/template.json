@@ -140,17 +140,23 @@
                         {
                             "question": "Como podemos te ajudar?",
                             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo.",
-                            "style": {"textAlign":"justify"}
+                            "style": {
+                                "textAlign": "justify"
+                            }
                         },
                         {
                             "question": "O que precisas?",
                             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo.",
-                            "style": {"textAlign":"justify"}
+                            "style": {
+                                "textAlign": "justify"
+                            }
                         },
                         {
                             "question": "O que queres saber?",
                             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo.",
-                            "style": {"textAlign":"justify"}
+                            "style": {
+                                "textAlign": "justify"
+                            }
                         }
                     ],
                     "style": {}

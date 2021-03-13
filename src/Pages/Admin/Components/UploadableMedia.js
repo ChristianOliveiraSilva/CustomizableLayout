@@ -15,7 +15,32 @@ class Base extends React.Component {
     }
 
     changeInput (event) {
-        alert()
+        console.log(event.target.files);
+        if (event.target.files && event.target.files[0]) {
+            const file = new FileReader();
+            file.onload = function(e) {
+                this.setState({
+                    img: e.target.result
+                })
+            }
+            file.onload = file.onload.bind(this);
+            file.readAsDataURL(event.target.files[0]);
+            
+            const formData = new FormData();
+            formData.append("img", event.target.files[0]); 
+            formData.append("key", this.props.key); 
+            formData.append("component", this.props.component); 
+
+            const ajax = new XMLHttpRequest();
+            ajax.onreadystatechange = function() {
+                if (this.readyState == 4) {
+            		console.log(this);
+                }
+            }
+
+            ajax.open('POST',"localhost:3001",true);
+            ajax.send(formData);
+        }
     }
 
     render() {

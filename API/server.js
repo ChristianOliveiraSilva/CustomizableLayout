@@ -6,6 +6,21 @@ const filePath = isDev ? '../public/template/template.json' : '../build/template
 
 http.createServer(function (req, res) {
     console.log(req.url);
+
+    if (req.url == '/upload') {
+        res.writeHead(200, {'Content-Type': 'application/json'});
+        res.write(JSON.stringify({"status":"OK"}));
+        res.end();
+        return false;
+    }
+
+    if (req.url != '/') {
+        res.writeHead(200, {'Content-Type': 'application/json'});
+        res.write(JSON.stringify({"error":"404"}));
+        res.end();
+        return false;
+    }
+    
     try {
         fs.readFile(filePath, 'utf8', function(err, data) {
             if (err) throw err;

@@ -44,7 +44,7 @@ class Base extends React.Component {
                 {
                     this.state.components[0].content.map((item, key) => (
                         <div key={key} className="bordered">
-                            <UploadableMedia img={item.img} item={key} />
+                            <UploadableMedia img={item.img} item={key} component="PortfolioGallery" />
                             
                             <label>Título desta Imagem</label>
                             <input type="text" placeholder="Título da IMG" name="Title" value={this.state.components[0].subtitle} onChange={this.changeInput} />
