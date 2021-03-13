@@ -151,6 +151,10 @@ section#admin-system table {
     margin: 18px 0px 0px;
 }
 
+section#admin-system .title-content:not(.title-content:first-child) {
+    margin: 30px 0px 0px;
+}
+
 section#admin-system .container {
     margin-bottom: 25px;
     position: relative;

@@ -1,4 +1,6 @@
 import React from 'react'
+import img from '../../../Assets/style.png'
+
 
 class Base extends React.Component {
 
@@ -6,10 +8,11 @@ class Base extends React.Component {
         super(props)
         
         this.state = {
-            img: '',
+            css: {},
         }
 
         this.changeInput = this.changeInput.bind(this)
+        this.openModal = this.openModal.bind(this)
     }
 
     changeInput (event) {
@@ -22,15 +25,17 @@ class Base extends React.Component {
         });
     }
 
+    openModal () {
+        alert('clicado')
+    }
+
     render() {
 
         return (
-            <section>
-                
-                <label>Esconder menu ao rolar na Página?</label>
-                <input type="checkbox" name="hideOnScroll" value={this.state.hideOnScroll} onChange={this.changeInput} />
-                <button className="btn-submit">Salvar</button>
-            </section>
+            <span>
+                <img src={img} onClick={this.openModal} />
+                {/* <input type="checkbox" name="hideOnScroll" value={this.state.hideOnScroll} onChange={this.changeInput} /> */}
+            </span>
         )
     }
 

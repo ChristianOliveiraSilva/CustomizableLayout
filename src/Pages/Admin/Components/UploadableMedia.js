@@ -7,6 +7,7 @@ class Base extends React.Component {
         
         this.item = props.item
         this.id = Math.floor(Math.random() * 90000) + 1
+        console.log(this.id);
         this.state = {
             img: props.img,
         }
