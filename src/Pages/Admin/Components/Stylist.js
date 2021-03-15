@@ -1,6 +1,7 @@
 import React from 'react'
 import img from '../../../Assets/style.png'
 
+import Modal from './MicroComponents/Modal'
 
 class Base extends React.Component {
 
@@ -8,11 +9,13 @@ class Base extends React.Component {
         super(props)
         
         this.state = {
+            show: true,
             css: {},
         }
 
         this.changeInput = this.changeInput.bind(this)
         this.openModal = this.openModal.bind(this)
+        this.closeModal = this.closeModal.bind(this)
     }
 
     changeInput (event) {
@@ -26,7 +29,15 @@ class Base extends React.Component {
     }
 
     openModal () {
-        alert('clicado')
+        this.setState({
+            show: true
+        })
+    }
+
+    closeModal () {
+        this.setState({
+            show: false
+        })
     }
 
     render() {
@@ -34,7 +45,7 @@ class Base extends React.Component {
         return (
             <span>
                 <img src={img} onClick={this.openModal} />
-                {/* <input type="checkbox" name="hideOnScroll" value={this.state.hideOnScroll} onChange={this.changeInput} /> */}
+                {this.state.show && <Modal closeModal={this.closeModal} />}
             </span>
         )
     }
