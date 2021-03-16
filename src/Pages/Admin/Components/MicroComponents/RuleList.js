@@ -23,7 +23,8 @@ class Base extends React.Component {
     }
 
     render() {
-        const rules = this.state.rules;
+        const rules = this.props.rules
+
         return (
             <div className="rule-list">
                 <h3>Lista de regras Disponíveis</h3>
@@ -35,7 +36,7 @@ class Base extends React.Component {
                         rules.map((item, key) => {
                                 const style = {backgroundColor: item.color}
                                 return (
-                                    <p key={key} className="tag" style={style}>{item.name}</p>
+                                    <p key={key} className="tag" style={style} onClick={() => this.props.changeIndexRule(item.id)}>{item.name}</p>
                                 )
                             }
                         )

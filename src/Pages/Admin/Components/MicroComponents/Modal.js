@@ -9,29 +9,40 @@ class Base extends React.Component {
 
     constructor(props) {
         super(props)
-        
+
         this.state = {
-            rules: rules
+            rules: rules,
+            indexRule: null
         }
 
-        this.changeInput = this.changeInput.bind(this)
+        this.changeIndexRule = this.changeIndexRule.bind(this)
+        this.changeRuleValue = this.changeRuleValue.bind(this)
     }
 
-    changeInput (event) {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
-    
+    changeIndexRule (value) {    
         this.setState({
-          [name]: value
+            indexRule: value
+        });
+    }
+
+    changeRuleValue (value) {
+        let rules = this.state.rules
+        rules[this.state.indexRule].value = value
+
+        this.setState({
+            rules: rules
         });
     }
 
     render() {
+        const allRules = this.state.rules
+        const currentListRules = allRules.filter((item) => item.value != '')
+        const ruleListRules = allRules.filter((item) => item.value == '')
+        const indexRule = this.state.indexRule
+        const CurrentRuleRule = indexRule != null ? 
+                                allRules[allRules.findIndex((item) => item.id == indexRule)] : null
 
-        const currentListRules = this.state.rules
-        const ruleListRules = this.state.rules
-
+        // console.log(allRules);
         return (
             <section className="modal">
                 <section className="modal-content">
@@ -39,9 +50,9 @@ class Base extends React.Component {
                     <h4>Regras</h4>
 
                     <section style={{padding:'10px'}}>
-                        <CurrentList rules={currentListRules}/>
-                        <RuleList rules={ruleListRules}/>
-                        <CurrentRule /> 
+                        <CurrentList rules={currentListRules} changeIndexRule={this.changeIndexRule} />
+                        <RuleList rules={ruleListRules} changeIndexRule={this.changeIndexRule} />
+                        <CurrentRule rule={CurrentRuleRule} changeRuleValue={this.changeRuleValue} /> 
                     </section>
                     <button className="btn-close" onClick={this.props.closeModal} title="clique para sair">OK</button>
                 </section>

@@ -2,17 +2,8 @@ import React from 'react'
 
 class Base extends React.Component {
 
-    constructor(props) {
-        super(props)
-        
-        this.state = {
-            rules: this.props.rules
-        }
-    }
-
-
     render() {
-        const rules = this.state.rules;
+        const rules = this.props.rules
 
         return (
             <div className="current-list">
@@ -25,7 +16,7 @@ class Base extends React.Component {
                         rules.map((item, key) => {
                                 const style = {backgroundColor: item.color}
                                 return (
-                                    <p key={key} className="tag" style={style}>{item.name}</p>
+                                    <p key={key} className="tag" style={style} onClick={() => this.props.changeIndexRule(item.id)}>{item.name}</p>
                                 )
                             }
                         )
