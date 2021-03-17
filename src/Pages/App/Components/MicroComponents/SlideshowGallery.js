@@ -1,67 +1,44 @@
 
 import "./Style/SlideshowGallery.css";
+import React, { useState } from 'react';
 
 function Base(props) {
     const config = props.config
+    console.log(config);
+    const [index, setIndex] = useState(0);
+
+    console.log(index)
 
     return (
         <div style={config.style} className="container-slideshow">
-            <div className="mySlides-slideshow active-slideshow">
-                <div className="numbertext-slideshow">1 / 6</div>
-                <img src="media/teste/img (10).jpg" style={{width:'100%'}} />
-            </div>
 
-            <div className="mySlides-slideshow" style={{display:'block'}}>
-                <div className="numbertext-slideshow">2 / 6</div>
-                <img src="media/teste/img (11).jpg" style={{width:'100%'}} />
-            </div>
+            { config.content.map(({img, legend}, key) => {
+                const className = key == index ? 'mySlides-slideshow active-slideshow' : 'mySlides-slideshow'
+                const style = key == index ? {display: 'block'} : {}
+                return (
+                    <div key={key} className={className} style={style}>
+                        <div className="numbertext-slideshow">{key+1} / {config.content.length}</div>
+                        <img src={img} title={legend} style={{width:'100%'}} />
+                    </div>
+                ) }
+            ) }
 
-            <div className="mySlides-slideshow">
-                <div className="numbertext-slideshow">3 / 6</div>
-                <img src="media/teste/img (12).jpg" style={{width:'100%'}} />
-            </div>
-
-            <div className="mySlides-slideshow">
-                <div className="numbertext-slideshow">4 / 6</div>
-                <img src="media/teste/img (13).jpg" style={{width:'100%'}} />
-            </div>
-
-            <div className="mySlides-slideshow">
-                <div className="numbertext-slideshow">5 / 6</div>
-                <img src="media/teste/img (14).jpg" style={{width:'100%'}} />
-            </div>
-
-            <div className="mySlides-slideshow">
-                <div className="numbertext-slideshow">6 / 6</div>
-                <img src="media/teste/img (15).jpg" style={{width:'100%'}} />
-            </div>
-
-            <a className="prev-slideshow" onclick="plusSlides(-1)">&#10094;</a>
-            <a className="next-slideshow" onclick="plusSlides(1)">&#10095;</a>
+            <a className="prev-slideshow">&#10094;</a>
+            <a className="next-slideshow">&#10095;</a>
 
             <div className="caption-slideshow-container">
-                <p id="caption">{config.caption}</p>
+                <p id="caption">{config.content[index].legend}</p>
             </div>
 
             <div className="row-slideshow">
-                <div className="column-slideshow">
-                    <img className="demo-slideshow cursor-slideshow" src="media/teste/img (16).jpg" style={{width:'100%'}} onclick="currentSlide(1)" alt="The Woods" />
-                </div>
-                <div className="column-slideshow">
-                    <img className="demo-slideshow cursor-slideshow" src="media/teste/img (16).jpg" style={{width:'100%'}} onclick="currentSlide(2)" alt="Cinque Terre" />
-                </div>
-                <div className="column-slideshow">
-                    <img className="demo-slideshow cursor-slideshow" src="media/teste/img (18).jpg" style={{width:'100%'}} onclick="currentSlide(3)" alt="Mountains and fjords" />
-                </div>
-                <div className="column-slideshow">
-                    <img className="demo-slideshow cursor-slideshow" src="media/teste/img (19).jpg" style={{width:'100%'}} onclick="currentSlide(4)" alt="Northern Lights" />
-                </div>
-                <div className="column-slideshow">
-                    <img className="demo-slideshow cursor-slideshow" src="media/teste/img (20).jpg" style={{width:'100%'}} onclick="currentSlide(5)" alt="Nature and sunrise" />
-                </div>
-                <div className="column-slideshow">
-                    <img className="demo-slideshow cursor-slideshow" src="media/teste/img (21).jpg" style={{width:'100%'}} onclick="currentSlide(6)" alt="Snowy Mountains" />
-                </div>
+                { config.content.map(({img, legend}, key) =>
+                    (
+                        <div key={key} className="column-slideshow">
+                            <img className="demo-slideshow cursor-slideshow" src={img} title={legend} style={{width:'100%'}} onClick={() => setIndex(key)} />
+                        </div>
+                    )
+                ) }
+            
             </div>
         </div>
     )

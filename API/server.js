@@ -1,20 +1,22 @@
-var http = require('http');
-var fs = require('fs');
+const http = require('http');
+const fs = require('fs');
+const url = require('url');
 
 const isDev = true
 const filePath = isDev ? '../public/template/template.json' : '../build/template/template.json'  
 
 http.createServer(function (req, res) {
-    console.log(req.url);
+    const urlParsed = url.parse(req.url, true)
 
-    if (req.url == '/upload') {
+    if (urlParsed.pathname == '/upload') {
         res.writeHead(200, {'Content-Type': 'application/json'});
         res.write(JSON.stringify({"status":"OK"}));
         res.end();
         return false;
     }
 
-    if (req.url != '/') {
+
+    if (urlParsed.pathname != '/') {
         res.writeHead(200, {'Content-Type': 'application/json'});
         res.write(JSON.stringify({"error":"404"}));
         res.end();
@@ -49,6 +51,37 @@ http.createServer(function (req, res) {
 
 
 function changeJSON(obj) {
+    const path = 'config/title'
+    const struct = path.split('/')
+    const value = 'banana'
+    
+    obj2 = buildRecursiveObject(struct, value)
+    let merged = mergeRecursive(obj, obj2)
     
     return obj
+}
+
+function mergeRecursive(obj1, obj2) {
+    for (var p in obj2) {
+        try {
+            if ( obj2[p].constructor == Object ) {
+                obj1[p] = mergeRecursive(obj1[p], obj2[p]);
+            } else {
+                obj1[p] = obj2[p];
+            }
+        } catch(e) {
+            obj1[p] = obj2[p];
+        }
+    }
+    return obj1;
+}
+
+function buildRecursiveObject(struct, value) {
+    let obj = {}
+
+    struct.forEach(element => {
+        Object.assign(obj, {[element]: value})
+    });
+
+    return obj;
 }

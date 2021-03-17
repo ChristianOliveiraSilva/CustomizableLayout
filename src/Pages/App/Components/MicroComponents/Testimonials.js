@@ -16,7 +16,7 @@ function Base(props) {
                         <p>"{item.text}"</p>
                     </section>
                     <section className="col-2">
-                        <iframe src={item.iframe} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src={item.iframe} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </section>
                 </section>
             ))}

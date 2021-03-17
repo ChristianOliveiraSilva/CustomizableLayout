@@ -1,48 +1,57 @@
 {
     "config": {
         "title": "Aline Moura",
-        "siteName": "Aline Moura",
+        "siteName": "Aline Moura - sistema",
         "logo": "media/teste/img (1).jpg",
-        "globalStyle": {
-        }
+        "globalStyle": {}
     },
     "components": {
         "header": {
-            "style": {
-            },
+            "style": {},
             "nav": {
                 "title": "Aline Moura",
                 "hideOnScroll": true,
                 "links": [
-                    {"text":"Portfolio Gallery","href":"#PortfolioGallery"},
-                    {"text":"Slideshow Gallery","href":"#SlideshowGallery"},
-                    {"text":"Tabs","href":"#Tabs"},
-                    {"text":"Testimonials","href":"#Testimonials"}
+                    {
+                        "text": "Portfolio Gallery",
+                        "href": "#PortfolioGallery"
+                    },
+                    {
+                        "text": "Slideshow Gallery",
+                        "href": "#SlideshowGallery"
+                    },
+                    {
+                        "text": "Accordion",
+                        "href": "#Accordion"
+                    },
+                    {
+                        "text": "Testimonials",
+                        "href": "#Testimonials"
+                    }
                 ]
             }
         },
         "aboveTheFold": {
-            "style": {
-            },
+            "style": {},
             "component": {
                 "slideshow": {
                     "lead": [
                         {
-                            "title":"teste",
-                            "subtitle":"teste",
-                            "imgPath":"media/teste/img (1).jpg",
+                            "title": "teste",
+                            "subtitle": "teste",
+                            "imgPath": "media/teste/img (1).jpg",
                             "style": {}
                         },
                         {
-                            "title":"teste",
-                            "subtitle":"teste",
-                            "imgPath":"media/teste/img (62).jpg",
+                            "title": "teste",
+                            "subtitle": "teste",
+                            "imgPath": "media/teste/img (62).jpg",
                             "style": {}
                         },
                         {
-                            "title":"teste",
-                            "subtitle":"teste",
-                            "imgPath":"media/teste/img (3).jpg",
+                            "title": "teste",
+                            "subtitle": "teste",
+                            "imgPath": "media/teste/img (3).jpg",
                             "style": {}
                         }
                     ]
@@ -50,27 +59,39 @@
             }
         },
         "mainContent": {
-            "style": {
-            },
-            "components":[
+            "style": {},
+            "components": [
                 {
-                    "type":"PortfolioGallery",
+                    "type": "PortfolioGallery",
                     "style": {},
                     "title": "Aline Moura",
                     "subtitle": "teste",
-                    "gridItens": [
-                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
-                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
-                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
-                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
-                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
-                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
-                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
-                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
-                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
-                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
-                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"},
-                        {"title": "Aline Moura", "subtitle": "teste", "img": "media/teste/img (50).jpg"}
+                    "content": [
+                        {
+                            "title": "Aline Moura",
+                            "subtitle": "teste",
+                            "img": "media/teste/img (50).jpg"
+                        },
+                        {
+                            "title": "Aline Moura",
+                            "subtitle": "teste",
+                            "img": "media/teste/img (50).jpg"
+                        },
+                        {
+                            "title": "Aline Moura",
+                            "subtitle": "teste",
+                            "img": "media/teste/img (50).jpg"
+                        },
+                        {
+                            "title": "Aline Moura",
+                            "subtitle": "teste",
+                            "img": "media/teste/img (50).jpg"
+                        },
+                        {
+                            "title": "Aline Moura",
+                            "subtitle": "teste",
+                            "img": "media/teste/img (50).jpg"
+                        }
                     ]
                 },
                 {
@@ -79,34 +100,74 @@
                     "caption": "text"
                 },
                 {
-                    "type": "Tabs",
+                    "type": "Accordion",
                     "content": [
-                        {"title":"teste 1", "text":"texto 1", "style": {}},
-                        {"title":"teste 2", "text":"texto 2", "style": {}},
-                        {"title":"teste 3", "text":"texto 3", "style": {}}
+                        {
+                            "question": "Como podemos te ajudar?",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo.",
+                            "style": {
+                                "textAlign": "justify"
+                            }
+                        },
+                        {
+                            "question": "O que precisas?",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo.",
+                            "style": {
+                                "textAlign": "justify"
+                            }
+                        },
+                        {
+                            "question": "O que queres saber?",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo.",
+                            "style": {
+                                "textAlign": "justify"
+                            }
+                        }
                     ],
                     "style": {}
                 },
                 {
                     "type": "Testimonials",
                     "content": [
-                        {"name":"teste 1","img":"/media/teste/avatar.png", "text":"texto 1", "style": {}},
-                        {"name":"teste 2","img":"/media/teste/avatar.png", "text":"texto 2", "style": {}},
-                        {"name":"teste 3","img":"/media/teste/avatar.png", "text":"texto 3", "style": {}}
+                        {
+                            "name": "nome 1",
+                            "img": "/media/teste/avatar.png",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. 1",
+                            "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo",
+                            "style": {}
+                        },
+                        {
+                            "name": "nome 2",
+                            "img": "/media/teste/avatar.png",
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. 2",
+                            "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo",
+                            "style": {}
+                        },
+                        {
+                            "name": "nome 3",
+                            "img": "/media/teste/avatar.png",
+                            "text": "texto 3",
+                            "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo",
+                            "style": {}
+                        }
                     ],
                     "style": {}
                 }
             ]
         },
         "footer": {
-            "style": {
-            },
+            "style": {},
             "content": {
-                "text1":"teste",
-                "text2":"teste",
-                "text3":"teste",
-                "text4":"teste",
-                "text5":"teste"
+                "text1": "teste1232132131",
+                "text2": "teste",
+                "text3": "teste",
+                "text4": "teste",
+                "text5": "teste",
+                "text6": "teste",
+                "text7": "teste",
+                "text8": "teste",
+                "text9": "teste",
+                "text10": "teste"
             }
         }
     }
