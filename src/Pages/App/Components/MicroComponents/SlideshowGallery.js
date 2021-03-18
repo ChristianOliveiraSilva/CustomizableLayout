@@ -4,10 +4,14 @@ import React, { useState } from 'react';
 
 function Base(props) {
     const config = props.config
-    console.log(config);
     const [index, setIndex] = useState(0);
 
-    console.log(index)
+    function changeIndex(value) {
+        const newValue = value + index
+        if (newValue >= 0 && newValue < config.content.length) {
+            setIndex(newValue)
+        }
+    }
 
     return (
         <div style={config.style} className="container-slideshow">
@@ -18,13 +22,13 @@ function Base(props) {
                 return (
                     <div key={key} className={className} style={style}>
                         <div className="numbertext-slideshow">{key+1} / {config.content.length}</div>
-                        <img src={img} title={legend} style={{width:'100%'}} />
+                        <img src={img} title={legend}/>
                     </div>
                 ) }
             ) }
 
-            <a className="prev-slideshow">&#10094;</a>
-            <a className="next-slideshow">&#10095;</a>
+            <a className="prev-slideshow" onClick={() => changeIndex(-1)}>&#10094;</a>
+            <a className="next-slideshow" onClick={() => changeIndex(1)}>&#10095;</a>
 
             <div className="caption-slideshow-container">
                 <p id="caption">{config.content[index].legend}</p>

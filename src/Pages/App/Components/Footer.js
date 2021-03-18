@@ -17,8 +17,7 @@ class Footer extends React.Component {
             <footer id="footer" className="container" style={config.style}>
                 <div className="row">
                     <div className="col">
-                        <img src={globalConfig.logo} alt={globalConfig.siteName} width="180"/>
-                        <h3 className="text-center">{globalConfig.siteName}</h3>
+                        <img src={globalConfig.logo} alt={globalConfig.siteName} className="logo" width="180"/>
                     </div>
                     <div className="col">
                         <p>{config.content.text1}</p>
@@ -35,6 +34,9 @@ class Footer extends React.Component {
                         <p>{config.content.text10}</p>
                     </div>
                 </div>
+                <p style={{textAlign: 'center'}}><small>{new Date().getFullYear()} |
+                Todos os Direitos Reservados |
+                Produzido por <a href="https://www.facebook.com/comoeuvimpararaki/">Christian</a></small></p>
             </footer>
         )
     }

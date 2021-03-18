@@ -23,7 +23,6 @@ body {
 }
 
 header#header {
-    background-color: #333; 
     position: fixed; 
     top: 0; 
     width: 100%; 
@@ -177,5 +176,12 @@ section#AboveTheFold {
 footer#footer {
   padding: 10px;
   padding-top: 30px;
-  background-color: #333; 
+}
+
+@media screen and (max-width: 600px) {
+
+  footer#footer img.logo{
+    display: block;
+    margin: auto;
+  }
 }

@@ -19,9 +19,13 @@
 }
 
 @media screen and (max-width: 600px) {
-    .col {
+    .col,
+    .col-3,
+    .col-4,
+    .col-2 {
         width: 100%;
-    }
+        margin: 8px;
+    }    
 }
 
 

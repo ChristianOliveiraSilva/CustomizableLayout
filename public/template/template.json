@@ -148,23 +148,23 @@
                     "type": "Testimonials",
                     "content": [
                         {
-                            "name": "nome 1",
+                            "name": "Bia",
                             "img": "/media/teste/avatar.png",
                             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. 1",
-                            "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo",
+                            "iframe": "",
                             "style": {}
                         },
                         {
-                            "name": "nome 2",
+                            "name": "Maria joaquina",
                             "img": "/media/teste/avatar.png",
                             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. 2",
                             "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo",
                             "style": {}
                         },
                         {
-                            "name": "nome 3",
+                            "name": "Clara",
                             "img": "/media/teste/avatar.png",
-                            "text": "texto 3",
+                            "text": "",
                             "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo",
                             "style": {}
                         }
