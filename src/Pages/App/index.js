@@ -27,13 +27,9 @@ class App extends React.Component {
 
     render() {
         if( !this.state.template || this.state.error)
-            return (
-                <div>
-                    <h1>RODAR ANIMAÇÃO DE PAGINA CARREGANDO AQUI</h1>
-                </div>
-            )
-        
-        return <Engine template={this.state.template} />
+            return <div className="rotate" />
+
+            return <Engine template={this.state.template} />
     }
 }
 

@@ -56,7 +56,7 @@ function changeJSON(obj) {
     const value = 'banana'
     
     obj2 = buildRecursiveObject(struct, value)
-    let merged = mergeRecursive(obj, obj2)
+    // let merged = mergeRecursive(obj, obj2)
     
     return obj
 }
@@ -77,11 +77,15 @@ function mergeRecursive(obj1, obj2) {
 }
 
 function buildRecursiveObject(struct, value) {
-    let obj = {}
+    let obj = {}, obj1 = {}
 
-    struct.forEach(element => {
-        Object.assign(obj, {[element]: value})
-    });
+    console.log(struct);
 
+    for (let index = 0; index < struct.length; index++) {
+        const element = struct[index];
+        obj[element] = value
+    }
+
+    console.log(obj);
     return obj;
 }

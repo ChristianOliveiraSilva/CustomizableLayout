@@ -100,20 +100,20 @@
                     "caption": "text",
                     "content": [
                         {
-                            "img":"media/teste/img (50).jpg",
-                            "legend":"lorem dadsdsad asdasdkm"
+                            "img": "media/teste/img (50).jpg",
+                            "legend": "lorem dadsdsad asdasdkm"
                         },
                         {
-                            "img":"media/teste/img (51).jpg",
-                            "legend":"lorem jkasdnasdasddsdsa kasdnk asdasdkm"
+                            "img": "media/teste/img (51).jpg",
+                            "legend": "lorem jkasdnasdasddsdsa kasdnk asdasdkm"
                         },
                         {
-                            "img":"media/teste/img (59).jpg",
-                            "legend":"lorem jkasdnkaadsd  sdnk asdasdkm"
+                            "img": "media/teste/img (59).jpg",
+                            "legend": "lorem jkasdnkaadsd  sdnk asdasdkm"
                         },
                         {
-                            "img":"media/teste/img (53).jpg",
-                            "legend":"lorem jkasdnkdaasd asdnk asdasdkm"
+                            "img": "media/teste/img (53).jpg",
+                            "legend": "lorem jkasdnkdaasd asdnk asdasdkm"
                         }
                     ]
                 },
