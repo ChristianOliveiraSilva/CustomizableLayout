@@ -9,8 +9,8 @@ class Base extends React.Component {
         super(props)
         
         this.state = {
-            show: true,
-            css: {},
+            show: false,
+            css: this.props.css,
         }
 
         this.changeInput = this.changeInput.bind(this)
