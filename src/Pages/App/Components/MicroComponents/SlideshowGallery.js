@@ -14,15 +14,17 @@ function Base(props) {
     }
 
     return (
-        <div style={config.style} className="container-slideshow">
+        <div id="SlideshowGallery" style={config.style} className="container-slideshow">
 
-            { config.content.map(({img, legend}, key) => {
+            { config.content.map(({img, legend, link}, key) => {
                 const className = key == index ? 'mySlides-slideshow active-slideshow' : 'mySlides-slideshow'
                 const style = key == index ? {display: 'block'} : {}
                 return (
                     <div key={key} className={className} style={style}>
-                        <div className="numbertext-slideshow">{key+1} / {config.content.length}</div>
-                        <img src={img} title={legend}/>
+                        <a href={link}>
+                            <div className="numbertext-slideshow">{key+1} / {config.content.length}</div>
+                            <img src={img} title={legend}/>
+                        </a>
                     </div>
                 ) }
             ) }

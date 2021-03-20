@@ -13,11 +13,14 @@ class AboveTheFold extends React.Component {
         this.currentSlide = this.currentSlide.bind(this)
     }
 
-    componentDidMount(){
-        setInterval(() => this.plusSlides(1), 4000)
+    componentDidMount() {
+        let intervalID = setInterval(() => this.plusSlides(1), 4000)
+        this.setState({
+            intervalID: intervalID
+        })
     }
 
-    componentWillUnmount(){
+    componentWillUnmount() {
         clearInterval(this.state.intervalID)
     }
 
@@ -55,15 +58,17 @@ class AboveTheFold extends React.Component {
             <section id="AboveTheFold" style={config.style}>
                 <div className="slideshow-container">
                     { config.component.slideshow.lead.map((page,key) =>{
-                        const {title, subtitle, imgPath, style} = page
+                        const {title, subtitle, imgPath, style, link} = page
                         const show = this.state.slide == key ? {display: 'block'} : {}
                         const description = `${title} ${subtitle}`
 
                         return (
                             <div key={key} style={style, show} className="mySlides fade">
-                                <div className="numbertext">{key+1} / {config.component.slideshow.lead.length}</div>
-                                <img src={imgPath} alt={description} title={description} />
-                                <div className="text" title={description}>{description}</div>
+                                <a href={link}>
+                                    <div className="numbertext">{key+1} / {config.component.slideshow.lead.length}</div>
+                                    <img src={imgPath} alt={description} title={description} />
+                                    <div className="text" title={description}>{description}</div>
+                                </a>
                             </div>
                         )
                     }) }

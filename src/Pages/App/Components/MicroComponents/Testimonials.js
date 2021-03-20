@@ -5,7 +5,7 @@ function Base(props) {
     const config = props.config
     const content = config.content
     return (
-        <section className="main-container-testimonials">
+        <section id="Testimonials" className="main-container-testimonials">
             <h1 className="main-title-testimonials">Depoimentos das clientes</h1>
             
             {content.map((item, key) => {

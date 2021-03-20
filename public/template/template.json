@@ -7,25 +7,25 @@
     },
     "components": {
         "header": {
-            "style": {},
+            "style": {"backgroundColor":"rgb(231, 119, 143)"},
             "nav": {
                 "title": "Aline Moura",
                 "hideOnScroll": true,
                 "links": [
                     {
-                        "text": "Portfolio Gallery",
+                        "text": "Tiaras",
                         "href": "#PortfolioGallery"
                     },
                     {
-                        "text": "Slideshow Gallery",
+                        "text": "Galeria de Imagens",
                         "href": "#SlideshowGallery"
                     },
                     {
-                        "text": "Accordion",
+                        "text": "Perguntas Frequentes",
                         "href": "#Accordion"
                     },
                     {
-                        "text": "Testimonials",
+                        "text": "Testemunhos",
                         "href": "#Testimonials"
                     }
                 ]
@@ -38,20 +38,16 @@
                     "lead": [
                         {
                             "title": "teste",
-                            "subtitle": "teste",
-                            "imgPath": "media/teste/img (1).jpg",
+                            "subtitle": "teste 2",
+                            "imgPath": "media/arts/slideshows 1a.jpg",
+                            "link": "####",
                             "style": {}
                         },
                         {
                             "title": "teste",
-                            "subtitle": "teste",
-                            "imgPath": "media/teste/img (62).jpg",
-                            "style": {}
-                        },
-                        {
-                            "title": "teste",
-                            "subtitle": "teste",
-                            "imgPath": "media/teste/img (3).jpg",
+                            "subtitle": "teste 2",
+                            "imgPath": "media/arts/slideshows 1b.jpg",
+                            "link": "####",
                             "style": {}
                         }
                     ]
@@ -65,32 +61,55 @@
                     "type": "PortfolioGallery",
                     "style": {},
                     "title": "Aline Moura",
-                    "subtitle": "teste",
+                    "subtitle": "teste 2",
                     "content": [
                         {
-                            "title": "Aline Moura",
-                            "subtitle": "teste",
-                            "img": "media/teste/img (50).jpg"
+                            "title": "Tiara xxxx",
+                            "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "link": "####",
+                            "img": "media/arts/390 x 260 1.jpg"
                         },
                         {
-                            "title": "Aline Moura",
-                            "subtitle": "teste",
-                            "img": "media/teste/img (50).jpg"
+                            "title": "Tiara xxxx",
+                            "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "link": "####",
+                            "img": "media/arts/390 x 260 2.jpg"
                         },
                         {
-                            "title": "Aline Moura",
-                            "subtitle": "teste",
-                            "img": "media/teste/img (50).jpg"
+                            "title": "Tiara xxxx",
+                            "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "link": "####",
+                            "img": "media/arts/390 x 260 3.jpg"
                         },
                         {
-                            "title": "Aline Moura",
-                            "subtitle": "teste",
-                            "img": "media/teste/img (50).jpg"
+                            "title": "Tiara xxxx",
+                            "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "link": "####",
+                            "img": "media/arts/390 x 260 4.jpg"
                         },
                         {
-                            "title": "Aline Moura",
-                            "subtitle": "teste",
-                            "img": "media/teste/img (50).jpg"
+                            "title": "Tiara xxxx",
+                            "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "link": "####",
+                            "img": "media/arts/390 x 260 5.jpg"
+                        },
+                        {
+                            "title": "Tiara xxxx",
+                            "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "link": "####",
+                            "img": "media/arts/390 x 260 6.jpg"
+                        },
+                        {
+                            "title": "Tiara xxxx",
+                            "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "link": "####",
+                            "img": "media/arts/390 x 260 7.jpg"
+                        },
+                        {
+                            "title": "Tiara xxxx",
+                            "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "link": "####",
+                            "img": "media/arts/390 x 260 8.jpg"
                         }
                     ]
                 },
@@ -100,20 +119,34 @@
                     "caption": "text",
                     "content": [
                         {
-                            "img": "media/teste/img (50).jpg",
-                            "legend": "lorem dadsdsad asdasdkm"
+                            "img": "media/arts/slideshows 1a.jpg",
+                            "link": "####",
+                            "legend": "Este é um curso que pode ser feito"
                         },
                         {
-                            "img": "media/teste/img (51).jpg",
-                            "legend": "lorem jkasdnasdasddsdsa kasdnk asdasdkm"
+                            "img": "media/arts/slideshows 1b.jpg",
+                            "link": "####",
+                            "legend": "Este é um curso que pode ser feito"
                         },
                         {
-                            "img": "media/teste/img (59).jpg",
-                            "legend": "lorem jkasdnkaadsd  sdnk asdasdkm"
+                            "img": "media/arts/slideshows 1a.jpg",
+                            "link": "####",
+                            "legend": "Este é um curso que pode ser feito"
                         },
                         {
-                            "img": "media/teste/img (53).jpg",
-                            "legend": "lorem jkasdnkdaasd asdnk asdasdkm"
+                            "img": "media/arts/slideshows 1b.jpg",
+                            "link": "####",
+                            "legend": "Este é um curso que pode ser feito"
+                        },
+                        {
+                            "img": "media/arts/slideshows 1a.jpg",
+                            "link": "####",
+                            "legend": "Este é um curso que pode ser feito"
+                        },
+                        {
+                            "img": "media/arts/slideshows 1b.jpg",
+                            "link": "####",
+                            "legend": "Este é um curso que pode ser feito"
                         }
                     ]
                 },
@@ -174,7 +207,7 @@
             ]
         },
         "footer": {
-            "style": {},
+            "style": {"backgroundColor":"rgb(231, 119, 143)"},
             "content": {
                 "text1": "teste1232132131",
                 "text2": "teste",
