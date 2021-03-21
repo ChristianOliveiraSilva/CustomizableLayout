@@ -155,10 +155,6 @@ section#admin-system button.btn-submit {
     border: 0;
 }
 
-section#admin-system table {
-    margin: 18px 0px 0px;
-}
-
 section#admin-system .title-content:not(.title-content:first-child) {
     margin: 30px 0px 0px;
 }
@@ -295,10 +291,37 @@ section#admin-system .modal {
     padding: 5px;
 }
   
-  section#admin-system .current-rule button.opc {
-      display: block;
-      padding: 5px;
-      cursor: pointer;
-      margin: 12px 10px;
-      margin-left: auto;
-  }
+section#admin-system .current-rule button.opc {
+    display: block;
+    padding: 5px;
+    cursor: pointer;
+    margin: 12px 10px;
+    margin-left: auto;
+}
+  
+section#admin-system button.add,
+section#admin-system button.remove {
+    display: block;
+    padding: 5px;
+    font-size: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 0px;
+    color: white;
+}
+  
+section#admin-system button.add {
+    background-color: green;
+    margin-bottom: 10px;
+}
+
+section#admin-system button.remove {
+    background-color: red;
+    float: right;
+}
+
+section#admin-system .content-item {
+    margin: 20px 0px;
+    padding: 10px;
+    border: 1px solid black;
+}

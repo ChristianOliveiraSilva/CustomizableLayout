@@ -42,6 +42,7 @@ class Configuration extends React.Component {
                     <a onClick={() => this.changeContent(1)}>Cabeçalho</a>
                     <a onClick={() => this.changeContent(2)}>Gerir Conteúdo</a>
                     <a onClick={() => this.changeContent(3)}>Rodapé</a>
+                    <a href="/"><small style={{color: '#99999988'}}>Ver site</small></a>
                 </div>
                 
                 <div className="main-admin-content">

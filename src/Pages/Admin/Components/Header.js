@@ -18,12 +18,14 @@ class Base extends React.Component {
                 title: this.props.template.components.header.nav.title,
                 hideOnScroll: this.props.template.components.header.nav.hideOnScroll,
                 links: this.props.template.components.header.nav.links,
-                aboveTheFold: this.props.template.components.aboveTheFold,
+                aboveTheFold: this.props.template.components.aboveTheFold.component.slideshow.lead,
             }
         }
 
         this.changeInput = this.changeInput.bind(this)
         this.changeInputLink = this.changeInputLink.bind(this)
+        this.addItem = this.addItem.bind(this)
+        this.removeItem = this.removeItem.bind(this)
     }
 
     changeInput (event) {
@@ -48,11 +50,49 @@ class Base extends React.Component {
         });
     }
 
+    addItem (component) {
+        let value = {}
+
+        switch (component) {
+            case "links":
+                value = {
+                    text: "",
+                    href: ""
+                }                
+                break;
+            case "aboveTheFold":
+                value = {
+                    title: "asdsad",
+                    subtitle: "asdasdsdsadsa 2",
+                    imgPath: "/media/vazio.png",
+                    link: "#",
+                    style: {}
+                }                
+                break;
+        }
+
+        const currentComponent = this.state[component]
+        this.setState({
+            [component]: [...currentComponent, value]
+        })
+    }
+
+    removeItem (component, index) {
+        let value = this.state[component]
+        value = value.filter((item, key) => {
+            return index != key;
+        })
+
+        this.setState({
+            [component]: value
+        })
+    }
+
     render() {
 
         return (
             <section>
-                <h1>Configurações Genéricas</h1>
+                <h1 className="title-content">Configurações Genéricas</h1>
                 <br />
                 <label>Título da Pagina</label>
                 <input type="text" placeholder="Título da Pagina" name="title" value={this.state.title} onChange={this.changeInput} />
@@ -61,9 +101,14 @@ class Base extends React.Component {
                 <input type="checkbox" name="hideOnScroll" value={this.state.hideOnScroll} onChange={this.changeInput} />
                 <br />
 
+                <h1 className="title-content">Links do cabeçalho</h1>
+                <button className="add" onClick={() => this.addItem("links")}>Adicionar</button>
+                {this.state.links.length == 0 && <p>Sem links</p>}
                 {this.state.links.map((item, key) => (
-                    <table key={key}>
-                        <tbody>
+                    <div key={key} className="content-item">
+                        <button className="remove" onClick={() => this.removeItem("links", key)}>Remover</button>
+                        <table>
+                            <tbody>
                                 <tr>
                                     <td>
                                         <p>Nome do link</p>
@@ -79,14 +124,20 @@ class Base extends React.Component {
                                         <small><span className="muted">{item.href}</span> Use esse codigo para conseguir linkar na pagina</small>
                                     </td>
                                 </tr>
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 ))}
 
-                <h3>Imagens da primeira galeria</h3>
-                {this.state.aboveTheFold.component.slideshow.lead.map((item, key) => (
-                    <section key={key} style={{marginTop:'20px', border: '1px solid black'}}>
-                        
+                <h1 className="title-content">Imagens da primeira galeria</h1>
+                <button className="add" onClick={() => this.addItem("aboveTheFold")}>Adicionar</button>
+                {this.state.aboveTheFold.length == 0 && <p>Sem Imagens</p>}
+                {this.state.aboveTheFold.map((item, key) => {
+                    console.log(item);
+                    return (
+                    <section key={key} className="content-item">
+                        <button className="remove" onClick={() => this.removeItem("aboveTheFold", key)}>Remover</button>
+
                         <label>Título da Pagina</label>
                         <input type="text" placeholder="Título da Pagina" name="title" value={item.title} onChange={this.changeInput} />
 
@@ -98,7 +149,7 @@ class Base extends React.Component {
 
                         <UploadableMedia img={item.imgPath} item={key} component="AboveTheFold" />
                     </section>
-                ))}
+                )})}
 
                 <button className="btn-submit">Salvar</button>
             </section>

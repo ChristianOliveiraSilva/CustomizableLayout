@@ -182,21 +182,21 @@
                     "content": [
                         {
                             "name": "Bia",
-                            "img": "/media/teste/avatar.png",
+                            "img": "/media/avatar.png",
                             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. 1",
                             "iframe": "",
                             "style": {}
                         },
                         {
                             "name": "Maria joaquina",
-                            "img": "/media/teste/avatar.png",
+                            "img": "/media/avatar.png",
                             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. 2",
                             "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo",
                             "style": {}
                         },
                         {
                             "name": "Clara",
-                            "img": "/media/teste/avatar.png",
+                            "img": "/media/avatar.png",
                             "text": "",
                             "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo",
                             "style": {}
