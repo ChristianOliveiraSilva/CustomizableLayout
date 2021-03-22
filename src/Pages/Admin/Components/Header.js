@@ -151,7 +151,7 @@ class Base extends React.Component {
                     </section>
                 )})}
 
-                <button className="btn-submit">Salvar</button>
+                <button className="btn-submit" onClick={this.save}>Salvar</button>
             </section>
         )
     }

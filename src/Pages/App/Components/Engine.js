@@ -22,7 +22,6 @@ class Engine extends React.Component {
     render() {
         const { config, components } = this.state.template
         const { header, aboveTheFold, mainContent, footer } = components
-        console.log({config, components})
 
         return (
             <div style={config.globalStyle}>

@@ -10,7 +10,7 @@ class Configuration extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            content: 1
+            content: 2
         }
 
         this.pages = [

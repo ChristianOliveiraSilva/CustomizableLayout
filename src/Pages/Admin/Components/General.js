@@ -48,7 +48,7 @@ class Base extends React.Component {
                 <label>Logo da Página</label>
                 <UploadableMedia img={this.state.logo} item={0} component="logo" />
                 
-                <button className="btn-submit">Salvar</button>
+                <button className="btn-submit" onClick={this.save}>Salvar</button>
             </section>
         )
     }
