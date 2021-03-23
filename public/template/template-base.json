@@ -2,30 +2,30 @@
     "config": {
         "title": "Aline Moura",
         "siteName": "Aline Moura - sistema",
-        "logo": "media/teste/img (1).jpg",
+        "logo": "media/vazio.png",
         "globalStyle": {}
     },
     "components": {
         "header": {
-            "style": {},
+            "style": {"backgroundColor":"rgb(231, 119, 143)"},
             "nav": {
                 "title": "Aline Moura",
                 "hideOnScroll": true,
                 "links": [
                     {
-                        "text": "Portfolio Gallery",
+                        "text": "Tiaras",
                         "href": "#PortfolioGallery"
                     },
                     {
-                        "text": "Slideshow Gallery",
+                        "text": "Galeria de Imagens",
                         "href": "#SlideshowGallery"
                     },
                     {
-                        "text": "Accordion",
+                        "text": "Perguntas Frequentes",
                         "href": "#Accordion"
                     },
                     {
-                        "text": "Testimonials",
+                        "text": "Testemunhos",
                         "href": "#Testimonials"
                     }
                 ]
@@ -38,20 +38,16 @@
                     "lead": [
                         {
                             "title": "teste",
-                            "subtitle": "teste",
-                            "imgPath": "media/teste/img (1).jpg",
+                            "subtitle": "teste 2",
+                            "imgPath": "media/arts/slideshows 1a.jpg",
+                            "link": "####",
                             "style": {}
                         },
                         {
                             "title": "teste",
-                            "subtitle": "teste",
-                            "imgPath": "media/teste/img (62).jpg",
-                            "style": {}
-                        },
-                        {
-                            "title": "teste",
-                            "subtitle": "teste",
-                            "imgPath": "media/teste/img (3).jpg",
+                            "subtitle": "teste 2",
+                            "imgPath": "media/arts/slideshows 1b.jpg",
+                            "link": "####",
                             "style": {}
                         }
                     ]
@@ -65,39 +61,94 @@
                     "type": "PortfolioGallery",
                     "style": {},
                     "title": "Aline Moura",
-                    "subtitle": "teste",
+                    "subtitle": "teste 2",
                     "content": [
                         {
-                            "title": "Aline Moura",
-                            "subtitle": "teste",
-                            "img": "media/teste/img (50).jpg"
+                            "title": "Tiara xxxx",
+                            "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "link": "####",
+                            "img": "media/arts/390 x 260 1.jpg"
                         },
                         {
-                            "title": "Aline Moura",
-                            "subtitle": "teste",
-                            "img": "media/teste/img (50).jpg"
+                            "title": "Tiara xxxx",
+                            "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "link": "####",
+                            "img": "media/arts/390 x 260 2.jpg"
                         },
                         {
-                            "title": "Aline Moura",
-                            "subtitle": "teste",
-                            "img": "media/teste/img (50).jpg"
+                            "title": "Tiara xxxx",
+                            "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "link": "####",
+                            "img": "media/arts/390 x 260 3.jpg"
                         },
                         {
-                            "title": "Aline Moura",
-                            "subtitle": "teste",
-                            "img": "media/teste/img (50).jpg"
+                            "title": "Tiara xxxx",
+                            "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "link": "####",
+                            "img": "media/arts/390 x 260 4.jpg"
                         },
                         {
-                            "title": "Aline Moura",
-                            "subtitle": "teste",
-                            "img": "media/teste/img (50).jpg"
+                            "title": "Tiara xxxx",
+                            "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "link": "####",
+                            "img": "media/arts/390 x 260 5.jpg"
+                        },
+                        {
+                            "title": "Tiara xxxx",
+                            "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "link": "####",
+                            "img": "media/arts/390 x 260 6.jpg"
+                        },
+                        {
+                            "title": "Tiara xxxx",
+                            "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "link": "####",
+                            "img": "media/arts/390 x 260 7.jpg"
+                        },
+                        {
+                            "title": "Tiara xxxx",
+                            "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "link": "####",
+                            "img": "media/arts/390 x 260 8.jpg"
                         }
                     ]
                 },
                 {
                     "type": "SlideshowGallery",
                     "style": {},
-                    "caption": "text"
+                    "caption": "text",
+                    "content": [
+                        {
+                            "img": "media/arts/slideshows 1a.jpg",
+                            "link": "####",
+                            "legend": "Este é um curso que pode ser feito"
+                        },
+                        {
+                            "img": "media/arts/slideshows 1b.jpg",
+                            "link": "####",
+                            "legend": "Este é um curso que pode ser feito"
+                        },
+                        {
+                            "img": "media/arts/slideshows 1a.jpg",
+                            "link": "####",
+                            "legend": "Este é um curso que pode ser feito"
+                        },
+                        {
+                            "img": "media/arts/slideshows 1b.jpg",
+                            "link": "####",
+                            "legend": "Este é um curso que pode ser feito"
+                        },
+                        {
+                            "img": "media/arts/slideshows 1a.jpg",
+                            "link": "####",
+                            "legend": "Este é um curso que pode ser feito"
+                        },
+                        {
+                            "img": "media/arts/slideshows 1b.jpg",
+                            "link": "####",
+                            "legend": "Este é um curso que pode ser feito"
+                        }
+                    ]
                 },
                 {
                     "type": "Accordion",
@@ -130,23 +181,23 @@
                     "type": "Testimonials",
                     "content": [
                         {
-                            "name": "nome 1",
-                            "img": "/media/teste/avatar.png",
+                            "name": "Bia",
+                            "img": "/media/avatar.png",
                             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. 1",
-                            "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo",
+                            "iframe": "",
                             "style": {}
                         },
                         {
-                            "name": "nome 2",
-                            "img": "/media/teste/avatar.png",
+                            "name": "Maria joaquina",
+                            "img": "/media/avatar.png",
                             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. 2",
                             "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo",
                             "style": {}
                         },
                         {
-                            "name": "nome 3",
-                            "img": "/media/teste/avatar.png",
-                            "text": "texto 3",
+                            "name": "Clara",
+                            "img": "/media/avatar.png",
+                            "text": "",
                             "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo",
                             "style": {}
                         }
@@ -156,7 +207,7 @@
             ]
         },
         "footer": {
-            "style": {},
+            "style": {"backgroundColor":"rgb(231, 119, 143)"},
             "content": {
                 "text1": "teste1232132131",
                 "text2": "teste",
