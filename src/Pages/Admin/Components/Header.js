@@ -133,7 +133,6 @@ class Base extends React.Component {
                 <button className="add" onClick={() => this.addItem("aboveTheFold")}>Adicionar</button>
                 {this.state.aboveTheFold.length == 0 && <p>Sem Imagens</p>}
                 {this.state.aboveTheFold.map((item, key) => {
-                    console.log(item);
                     return (
                     <section key={key} className="content-item">
                         <button className="remove" onClick={() => this.removeItem("aboveTheFold", key)}>Remover</button>

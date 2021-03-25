@@ -1,7 +1,7 @@
 import React from 'react'
 import Login from "./Components/Login";
 import Configuration from "./Components/Configuration";
-import './Style/style.css'
+import './style.css'
 
 class Admin extends React.Component {
 
