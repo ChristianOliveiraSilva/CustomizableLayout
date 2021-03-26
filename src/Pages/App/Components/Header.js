@@ -51,7 +51,7 @@ class Header extends React.Component {
                         <a key={key} href={link.href}>{link.text}</a>
                     )) }
 
-                    <a class="icon" onClick={this.toggleModal}>{hamburguerButtonText}</a>
+                    <a className="icon" onClick={this.toggleModal}>{hamburguerButtonText}</a>
                 </nav>
 
             </header>

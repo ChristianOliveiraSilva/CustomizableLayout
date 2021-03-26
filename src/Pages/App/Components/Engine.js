@@ -17,6 +17,14 @@ class Engine extends React.Component {
     componentDidMount() {
         const config = this.state.template.config
         document.title = config.title
+        
+        let link = document.querySelector("link[rel~='icon']");
+        if (!link) {
+            link = document.createElement('link');
+            link.rel = 'icon';
+            document.head.appendChild(link);
+        }
+        link.href = config.logo
     }
     
     render() {

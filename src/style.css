@@ -67,7 +67,7 @@ header#header {
     }
 
     header#header a:hover {
-        background-color: #ddd;
+        background-color: #fff;
         color: black;
     }
 
@@ -179,6 +179,43 @@ section#AboveTheFold {
 footer#footer {
   padding: 10px;
   padding-top: 30px;
+  position: relative;
+}
+
+footer#footer > div{
+  width: 70%;
+  margin: 0px auto;
+}
+
+footer#footer img.social-icon{
+  width: 25px;
+  margin: 5px;
+}
+
+footer#footer .backtop {
+  display: block;
+  background-color: #0099ff;
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: -25px;
+  right: 45px;
+  transition: 1s;
+}
+
+footer#footer .backtop:hover {
+  top: -10px;
+}
+
+footer#footer .backtop:after {
+  content: ' \039B';
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
@@ -214,6 +251,10 @@ footer#footer {
   header#header a:hover {
       background-color: transparent;
         color: white;
+  }
+  
+  footer#footer .backtop {
+    display: none;
   }
 }
   

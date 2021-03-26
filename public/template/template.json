@@ -2,7 +2,7 @@
     "config": {
         "title": "Aline Moura",
         "siteName": "Aline Moura - sistema",
-        "logo": "media/vazio.png",
+        "logo": "media/arts/logo.png",
         "globalStyle": {}
     },
     "components": {
@@ -219,7 +219,9 @@
                 "text8": "teste",
                 "text9": "teste",
                 "text10": "teste"
-            }
+            },
+            "facebook":"https://www.facebook.com/alinemouratl",
+            "instagram":"https://www.instagram.com/alinemouratl"
         }
     }
 }
