@@ -209,16 +209,15 @@
         "footer": {
             "style": {"backgroundColor":"rgb(231, 119, 143)"},
             "content": {
-                "text1": "teste1232132131",
-                "text2": "teste",
-                "text3": "teste",
-                "text4": "teste",
-                "text5": "teste",
-                "text6": "teste",
-                "text7": "teste",
-                "text8": "teste",
-                "text9": "teste",
-                "text10": "teste"
+                "text1": "Informações",
+                "text2": "teste 2",
+                "text3": "teste 3",
+                "text4": "teste 4",
+                "text5": "teste 5",
+                "link2": "teste",
+                "link3": "teste",
+                "link4": "teste",
+                "link5": "teste"
             },
             "facebook":"https://www.facebook.com/alinemouratl",
             "instagram":"https://www.instagram.com/alinemouratl"

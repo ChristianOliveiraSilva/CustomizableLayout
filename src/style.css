@@ -203,6 +203,11 @@ footer#footer .backtop {
   transition: 1s;
 }
 
+footer#footer h3 {
+  margin: 5px 0px;
+  color: white;
+}
+
 footer#footer .backtop:hover {
   top: -10px;
 }
@@ -218,16 +223,16 @@ footer#footer .backtop:after {
   cursor: pointer;
 }
 
+footer#footer img.logo{
+  display: block;
+  margin: auto;
+}
+
 @media screen and (max-width: 600px) {
 
   section#AboveTheFold {
     margin-top: 106px;
     height: calc(60vh - 106px);
-  }
-
-  footer#footer img.logo{
-    display: block;
-    margin: auto;
   }
 
   header#header nav.active a {

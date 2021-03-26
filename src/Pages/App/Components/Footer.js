@@ -18,17 +18,25 @@ class Footer extends React.Component {
         return (
             <footer id="footer" className="container" style={config.style}>
                 <div className="row">
-                    <div className="col">
+                    <div className="col-3">
                         <img src={globalConfig.logo} alt={globalConfig.siteName} className="logo" width="180"/>
                     </div>
-                    <div className="col">
-                        <p>{config.content.text1}</p>
-                        <p>{config.content.text2}</p>
-                        <p>{config.content.text3}</p>
-                        <p>{config.content.text4}</p>
-                        <p>{config.content.text5}</p>
+                    <div className="col-3">
+                        <h3>{config.content.text1}</h3>
+                        <a href={config.content.link2}>
+                            <p>{config.content.text2}</p>
+                        </a>
+                        <a href={config.content.link3}>
+                            <p>{config.content.text3}</p>
+                        </a>
+                        <a href={config.content.link4}>
+                            <p>{config.content.text4}</p>
+                        </a>
+                        <a href={config.content.link5}>
+                            <p>{config.content.text5}</p>
+                        </a>
                     </div>
-                    <div className="col">                        
+                    <div className="col-3">
                         <h3>Siga-nos</h3>
                         <a href={config.facebook}>
                             <img src={facebookImg} className="social-icon" alt="Acesse nosso facebook" title="Acesse nosso facebook"/>
@@ -37,13 +45,10 @@ class Footer extends React.Component {
                             <img src={instagramImg} className="social-icon" alt="Acesse nosso instagram" title="Acesse nosso instagram"/>
                         </a>
                     </div>
+                    <div className="backtop" title="Volte ao topo" onClick={() => window.scrollTo(0, 0)}></div>
                 </div>
-                <div className="backtop" title="Volte ao topo" onClick={() => window.scrollTo(0, 0)}></div>
 
-
-                <p style={{textAlign: 'center'}}><small>{new Date().getFullYear()} |
-                Todos os Direitos Reservados |
-                Produzido por <a href="https://www.facebook.com/comoeuvimpararaki/">Christian</a></small></p>
+                <p style={{marginTop: '15px', textAlign: 'center'}}><small>{new Date().getFullYear()} | Todos os Direitos Reservados | Produzido por <a href="https://www.facebook.com/comoeuvimpararaki/">Christian</a></small></p>
             </footer>
         )
     }
