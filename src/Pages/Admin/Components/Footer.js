@@ -49,22 +49,41 @@ class Base extends React.Component {
         return (
             <section>
                 <h3>Rodapé</h3>
-                
-                <label>Texto 1</label>
-                <input type="text" placeholder="Texto 1" name="text1" value={this.state.text1} onChange={this.changeInput} />
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label>Texto Maior</label>
+                                <input type="text" placeholder="Texto Maior" name="maior" value={this.state.text1} onChange={this.changeInput} />
 
-                <label>Texto 2</label>
-                <input type="text" placeholder="Texto 2" name="text2" value={this.state.text2} onChange={this.changeInput} />
+                                <label>Texto 1</label>
+                                <input type="text" placeholder="Texto 7" name="text7" value={this.state.text2} onChange={this.changeInput} />
 
-                <label>Texto 3</label>
-                <input type="text" placeholder="Texto 3" name="text3" value={this.state.text3} onChange={this.changeInput} />
+                                <label>Texto 2</label>
+                                <input type="text" placeholder="Texto 8" name="text8" value={this.state.text3} onChange={this.changeInput} />
 
-                <label>Texto 4</label>
-                <input type="text" placeholder="Texto 4" name="text4" value={this.state.text4} onChange={this.changeInput} />
+                                <label>Texto 3</label>
+                                <input type="text" placeholder="Texto 9" name="text9" value={this.state.text4} onChange={this.changeInput} />
 
-                <label>Texto 5</label>
-                <input type="text" placeholder="Texto 5" name="text5" value={this.state.text5} onChange={this.changeInput} />
+                                <label>Texto 4</label>
+                                <input type="text" placeholder="Texto 10" name="text10" value={this.state.text5} onChange={this.changeInput} />
+                            </td>
+                            <td>
+                                <label>Link 1</label>
+                                <input type="text" placeholder="Link 1" name="text1" value={this.state.link2} onChange={this.changeInput} />
 
+                                <label>Link 2</label>
+                                <input type="text" placeholder="Link 2" name="text2" value={this.state.link3} onChange={this.changeInput} />
+
+                                <label>Link 3</label>
+                                <input type="text" placeholder="Link 3" name="text3" value={this.state.link4} onChange={this.changeInput} />
+
+                                <label>Link 4</label>
+                                <input type="text" placeholder="Link 4" name="text4" value={this.state.link5} onChange={this.changeInput} />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
                 <button className="btn-submit" onClick={this.save}>Salvar</button>
             </section>
         )
