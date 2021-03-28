@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 import App from "./Pages/App/";
 import Admin from "./Pages/Admin/";
 import Course from "./Pages/Course/";
+import PageNotFound from "./Pages/PageNotFound/";
 
 import "./style.css"
 import "./base.css"
@@ -24,6 +25,9 @@ ReactDOM.render(
             </Route>
             <Route path="/course/:id">
                 <Course />
+            </Route>
+            <Route path="/">
+                <PageNotFound />
             </Route>
         </Switch>
     </Router>

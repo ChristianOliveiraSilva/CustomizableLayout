@@ -1,0 +1,32 @@
+
+.page404 {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.page404 button {
+  cursor: pointer;
+  padding: 18px;
+  background: linear-gradient(to bottom right, #e7778f 0%, #ff99cc 100%);
+  border: 0;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  transition: 0.7s;
+  border-radius: 5px;
+}
+
+.page404 button:hover {
+  background: linear-gradient(to top left, #e7778f 0%, #ff99cc 100%);
+  padding: 22px;
+}
+
+.page404 h1{
+  margin: 25px;
+  color: #e7778f;
+  text-transform: uppercase;
+  font-size: 3.5em;
+}

@@ -41,7 +41,7 @@ class Course extends React.Component {
 
     render() {
         if( !this.state.template || this.state.error)
-            return <div className="rotate">{this.state.error}</div>
+            return <div className="rotate"></div>
 
         const { config, components } = this.state.template
         const { header } = components
