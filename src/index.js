@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
 import App from "./Pages/App/";
 import Admin from "./Pages/Admin/";
+import Course from "./Pages/Course/";
 
 import "./style.css"
 import "./base.css"
@@ -17,6 +18,12 @@ ReactDOM.render(
             </Route>
             <Route exact path="/AdminPageConfiguration">
                 <Admin />
+            </Route>
+            <Route exact path="/course">
+                <Course />
+            </Route>
+            <Route path="/course/:id">
+                <Course />
             </Route>
         </Switch>
     </Router>

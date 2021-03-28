@@ -18,6 +18,12 @@
     clear: both;
 }
 
+.container {
+    max-width: 1000px;
+    display: block;
+    margin: auto;
+}
+
 @media screen and (max-width: 600px) {
     .col,
     .col-3,
@@ -27,7 +33,6 @@
         margin: 8px;
     }    
 }
-
 
 
 

@@ -45,14 +45,20 @@ class Header extends React.Component {
         return (
             <header id="header" style={config.style}>
                 <h1>{config.nav.title}</h1>
+                
+                { !this.props.closeNavbar ?
+                    <nav className={modalClassName}>
+                        { links.map((link,key) => (
+                            <a key={key} href={link.href}>{link.text}</a>
+                        )) }
 
-                <nav className={modalClassName}>
-                    { links.map((link,key) => (
-                        <a key={key} href={link.href}>{link.text}</a>
-                    )) }
-
-                    <a className="icon" onClick={this.toggleModal}>{hamburguerButtonText}</a>
-                </nav>
+                        <a className="icon" onClick={this.toggleModal}>{hamburguerButtonText}</a>
+                    </nav>
+                    :
+                    <nav className="active">
+                        <a href="/">Voltar</a>
+                    </nav>
+                }
 
             </header>
         )

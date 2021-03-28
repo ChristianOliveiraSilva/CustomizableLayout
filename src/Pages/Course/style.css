@@ -1,0 +1,55 @@
+
+
+main.course {
+  margin-top: 68px;
+  height: calc(100vh - 68px);
+  padding-top: 50px;
+}
+
+main.course .logo {
+  width: 70%;
+  padding: 30px;
+  box-shadow: 10px 10px 10px #ccc;
+}
+
+main.course img.thumbnail {
+  display: block;
+  margin: auto;
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 4px; 
+  padding: 5px;
+  width: 90%;
+  cursor: pointer;
+  transition: 0.58s;
+}
+
+main.course img.thumbnail:hover {
+  box-shadow: 0 0 2px 1px #aaa;
+}
+
+main.course button.buy {
+  cursor: pointer;
+  padding: 18px;
+  background: linear-gradient(to bottom right, #e7778f 0%, #ff99cc 100%);
+  border: 0;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  margin-top: 35px;
+  font-size: 1.5em;
+  transition: 0.7s;
+  border-radius: 5px;
+}
+
+main.course button.buy:hover {
+  background: linear-gradient(to top left, #e7778f 0%, #ff99cc 100%);
+  padding: 22px;
+}
+
+@media screen and (max-width: 600px) {
+
+  main.course {
+    margin-top: 130px;
+  }
+}

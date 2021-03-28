@@ -2,7 +2,7 @@
     "config": {
         "title": "Aline Moura",
         "siteName": "Aline Moura - sistema",
-        "logo": "media/arts/logo.png",
+        "logo": "/media/arts/logo.png",
         "globalStyle": {}
     },
     "components": {
@@ -39,14 +39,14 @@
                         {
                             "title": "teste",
                             "subtitle": "teste 2",
-                            "imgPath": "media/arts/slideshows 1a.jpg",
+                            "imgPath": "/media/arts/slideshows 1a.jpg",
                             "link": "####",
                             "style": {}
                         },
                         {
                             "title": "teste",
                             "subtitle": "teste 2",
-                            "imgPath": "media/arts/slideshows 1b.jpg",
+                            "imgPath": "/media/arts/slideshows 1b.jpg",
                             "link": "####",
                             "style": {}
                         }
@@ -66,50 +66,66 @@
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
-                            "link": "####",
-                            "img": "media/arts/390 x 260 1.jpg"
+                            "link": "/course/0",
+                            "img": "/media/arts/390 x 260 1.jpg",
+                            "description": "",
+                            "isClass": false
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
-                            "link": "####",
-                            "img": "media/arts/390 x 260 2.jpg"
+                            "link": "/course/1",
+                            "img": "/media/arts/390 x 260 2.jpg",
+                            "description": "",
+                            "isClass": false
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
-                            "link": "####",
-                            "img": "media/arts/390 x 260 3.jpg"
+                            "link": "/course/2",
+                            "img": "/media/arts/390 x 260 3.jpg",
+                            "description": "",
+                            "isClass": false
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
-                            "link": "####",
-                            "img": "media/arts/390 x 260 4.jpg"
+                            "link": "/course/3",
+                            "img": "/media/arts/390 x 260 4.jpg",
+                            "description": "",
+                            "isClass": false
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
-                            "link": "####",
-                            "img": "media/arts/390 x 260 5.jpg"
+                            "link": "/course/4",
+                            "img": "/media/arts/390 x 260 5.jpg",
+                            "description": "",
+                            "isClass": false
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
-                            "link": "####",
-                            "img": "media/arts/390 x 260 6.jpg"
+                            "link": "/course/5",
+                            "img": "/media/arts/390 x 260 6.jpg",
+                            "description": "",
+                            "isClass": false
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
-                            "link": "####",
-                            "img": "media/arts/390 x 260 7.jpg"
+                            "link": "/course/6",
+                            "img": "/media/arts/390 x 260 7.jpg",
+                            "description": "",
+                            "isClass": false
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
-                            "link": "####",
-                            "img": "media/arts/390 x 260 8.jpg"
+                            "link": "/course/7",
+                            "img": "/media/arts/390 x 260 8.jpg",
+                            "description": "",
+                            "isClass": false
                         }
                     ]
                 },
@@ -119,32 +135,32 @@
                     "caption": "text",
                     "content": [
                         {
-                            "img": "media/arts/slideshows 1a.jpg",
+                            "img": "/media/arts/slideshows 1a.jpg",
                             "link": "####",
                             "legend": "Este é um curso que pode ser feito"
                         },
                         {
-                            "img": "media/arts/slideshows 1b.jpg",
+                            "img": "/media/arts/slideshows 1b.jpg",
                             "link": "####",
                             "legend": "Este é um curso que pode ser feito"
                         },
                         {
-                            "img": "media/arts/slideshows 1a.jpg",
+                            "img": "/media/arts/slideshows 1a.jpg",
                             "link": "####",
                             "legend": "Este é um curso que pode ser feito"
                         },
                         {
-                            "img": "media/arts/slideshows 1b.jpg",
+                            "img": "/media/arts/slideshows 1b.jpg",
                             "link": "####",
                             "legend": "Este é um curso que pode ser feito"
                         },
                         {
-                            "img": "media/arts/slideshows 1a.jpg",
+                            "img": "/media/arts/slideshows 1a.jpg",
                             "link": "####",
                             "legend": "Este é um curso que pode ser feito"
                         },
                         {
-                            "img": "media/arts/slideshows 1b.jpg",
+                            "img": "/media/arts/slideshows 1b.jpg",
                             "link": "####",
                             "legend": "Este é um curso que pode ser feito"
                         }
