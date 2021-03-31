@@ -6,18 +6,24 @@ class AboveTheFold extends React.Component {
         super(props)
         this.state = {
             slide: 0,
-            intervalID: null
+            intervalID: null,
+            intervalDots: null,
+            showDots: true,
         }
 
         this.plusSlides = this.plusSlides.bind(this)
         this.currentSlide = this.currentSlide.bind(this)
+        this.hoverAbove = this.hoverAbove.bind(this)
     }
 
     componentDidMount() {
         let intervalID = setInterval(() => this.plusSlides(1), 4000)
+        let intervalDots = setTimeout(() => { this.setState({ showDots: false }) }, 1000)
         this.setState({
-            intervalID: intervalID
+            intervalID: intervalID,
+            intervalDots: intervalDots
         })
+
     }
 
     componentWillUnmount() {
@@ -49,18 +55,24 @@ class AboveTheFold extends React.Component {
             });
         }
     }
+
+    hoverAbove () {
+        clearInterval(this.state.intervalDots)
+        let intervalDots = setTimeout(() => { this.setState({ showDots: false }) }, 2000)
+        this.setState({ showDots: true, intervalDots: intervalDots })
+    }
     
     render() {
         const config = this.props.config
         const globalConfig = this.props.globalConfig
 
         return (
-            <section id="AboveTheFold" style={config.style}>
+            <section id="AboveTheFold" style={config.style} onMouseMove={this.hoverAbove}>
                 <div className="slideshow-container">
                     { config.component.slideshow.lead.map((page,key) =>{
                         const {title, subtitle, imgPath, style, link} = page
                         const show = this.state.slide == key ? {display: 'block'} : {}
-                        const description = `${title} ${subtitle}`
+                        const description = `${title}: ${subtitle}`
 
                         return (
                             <div key={key} style={style, show} className="mySlides fade">
@@ -76,12 +88,14 @@ class AboveTheFold extends React.Component {
                     <a className="prev" onClick={() => this.plusSlides(-1)}>&#10094;</a>
                     <a className="next" onClick={() => this.plusSlides(1)}>&#10095;</a>
                 </div>
-
-                <div className="dots" style={{textAlign:'center', zIndex:'2'}}>
-                    <span className="dot" onClick={() => this.currentSlide(0)}></span>
-                    <span className="dot" onClick={() => this.currentSlide(1)}></span>
-                    <span className="dot" onClick={() => this.currentSlide(2)}></span>
-                </div>
+                
+                { this.state.showDots &&
+                    <div className="dots" style={{textAlign:'center', zIndex:'2'}}>
+                        <span className="dot" onClick={() => this.currentSlide(0)}></span>
+                        <span className="dot" onClick={() => this.currentSlide(1)}></span>
+                        <span className="dot" onClick={() => this.currentSlide(2)}></span>
+                    </div>
+                }
             </section>
         )
     }
