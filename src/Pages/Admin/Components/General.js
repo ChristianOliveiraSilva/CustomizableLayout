@@ -42,7 +42,7 @@ class Base extends React.Component {
 
         return (
             <section>
-                <h1>Configurações Genéricas <Stylist /></h1>
+                <h1>Configurações Genéricas <Stylist component="asdasdas" /></h1>
                 <br />
                 <label>Título da Pagina</label>
                 <input type="text" placeholder="Título da Pagina" name="title" value={this.state.title} onChange={this.changeInput} />

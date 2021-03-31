@@ -136,7 +136,7 @@ class Base extends React.Component {
                     </div>
                 ))}
 
-                <h1 className="title-content">Imagens da primeira galeria <Stylist /></h1>
+                <h1 className="title-content">Imagens da primeira galeria <Stylist component="asdasdas" /></h1>
                 <button className="add" onClick={() => this.addItem("aboveTheFold")}>Adicionar</button>
                 {this.state.aboveTheFold.length == 0 && <p>Sem Imagens</p>}
                 {this.state.aboveTheFold.map((item, key) => {

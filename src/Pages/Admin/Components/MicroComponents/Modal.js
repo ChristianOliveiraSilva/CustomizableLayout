@@ -3,15 +3,15 @@ import React from 'react'
 import CurrentList from './CurrentList'
 import RuleList from './RuleList'
 import CurrentRule from './CurrentRule'
-import rules from './Rules'
+import roles from './Rules'
 
 class Base extends React.Component {
 
     constructor(props) {
         super(props)
-
+        alert(roles[5].value)
         this.state = {
-            rules: rules,
+            rules: roles,
             indexRule: null
         }
 
@@ -26,11 +26,11 @@ class Base extends React.Component {
     }
 
     changeRuleValue (value) {
-        let rules = this.state.rules
-        rules[this.state.indexRule].value = value
+        let allRules = this.state.rules
+        allRules[this.state.indexRule].value = value
 
         this.setState({
-            rules: rules
+            rules: allRules
         });
     }
 
@@ -39,10 +39,9 @@ class Base extends React.Component {
         const currentListRules = allRules.filter((item) => item.value != '')
         const ruleListRules = allRules.filter((item) => item.value == '')
         const indexRule = this.state.indexRule
-        const CurrentRuleRule = indexRule != null ? 
-                                allRules[allRules.findIndex((item) => item.id == indexRule)] : null
+        const currentRule = indexRule != null ? allRules[allRules.findIndex((item) => item.id == indexRule)] : null
 
-        // console.log(allRules);
+        console.log(allRules[5].value);
         return (
             <section className="modal">
                 <section className="modal-content">
@@ -52,7 +51,7 @@ class Base extends React.Component {
                     <section style={{padding:'10px'}}>
                         <CurrentList rules={currentListRules} changeIndexRule={this.changeIndexRule} />
                         <RuleList rules={ruleListRules} changeIndexRule={this.changeIndexRule} />
-                        <CurrentRule rule={CurrentRuleRule} changeRuleValue={this.changeRuleValue} /> 
+                        <CurrentRule rule={currentRule} changeRuleValue={this.changeRuleValue} /> 
                     </section>
                     <button className="btn-close" onClick={this.props.closeModal} title="clique para sair">OK</button>
                 </section>
