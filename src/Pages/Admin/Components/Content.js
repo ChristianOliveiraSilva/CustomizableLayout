@@ -1,5 +1,6 @@
 import React from 'react'
 import UploadableMedia from "./UploadableMedia";
+import Stylist from "./Stylist";
 
 class Base extends React.Component {
 
@@ -19,6 +20,10 @@ class Base extends React.Component {
         this.changeInput = this.changeInput.bind(this)
         this.addItem = this.addItem.bind(this)
         this.removeItem = this.removeItem.bind(this)
+    }
+
+    save () {
+        
     }
 
     changeInput (event) {
@@ -106,7 +111,7 @@ class Base extends React.Component {
 
         return (
             <section>
-                <h1 className="title-content">Galeria do portfólio</h1>
+                <h1 className="title-content">Galeria do portfólio <Stylist /></h1>
 
                 <label>Título da Galeria</label>
                 <input type="text" placeholder="Título da Galeria" name="title" value={portfolioGallery.title} onChange={this.changeInput} />
@@ -133,7 +138,7 @@ class Base extends React.Component {
                     ))
                 }
                 
-                <h1 className="title-content">Galeria de apresentação de slides</h1>
+                <h1 className="title-content">Galeria de apresentação de slides <Stylist /></h1>
                 <button className="add" onClick={() => this.addItem("slideshowGallery")}>Adicionar</button>
                 { slideshowGallery.content.length == 0 && <p>Sem Slides</p> }
                 {
@@ -151,7 +156,7 @@ class Base extends React.Component {
                     ))
                 }
 
-                <h1 className="title-content">Abas</h1>
+                <h1 className="title-content">Abas <Stylist /></h1>
                 <button className="add" onClick={() => this.addItem("accordion")}>Adicionar</button>
                 { accordion.content.length == 0 && <p>Sem questões</p> }
                 {
@@ -167,7 +172,7 @@ class Base extends React.Component {
                     ))
                 }
                 
-                <h1 className="title-content">Testemunhos</h1>
+                <h1 className="title-content">Testemunhos <Stylist /></h1>
                 <button className="add" onClick={() => this.addItem("testimonials")}>Adicionar</button>
                 { testimonials.content.length == 0 && <p>Sem Testemunhos</p> }
                 {

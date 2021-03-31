@@ -32,7 +32,7 @@ class Engine extends React.Component {
         const { header, aboveTheFold, mainContent, footer } = components
 
         return (
-            <div style={config.globalStyle}>
+            <div style={config.style}>
                 <Header config={header} globalConfig={config} />
                 <AboveTheFold config={aboveTheFold} globalConfig={config} />
                 <MainContent config={mainContent} globalConfig={config} />

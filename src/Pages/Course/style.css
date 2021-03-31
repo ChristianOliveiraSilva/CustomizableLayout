@@ -36,7 +36,8 @@ main.course button.buy {
   text-transform: uppercase;
   color: white;
   font-weight: bold;
-  margin-top: 35px;
+  display: block;
+  margin: 35px auto 15px;
   font-size: 1.5em;
   transition: 0.7s;
   border-radius: 5px;

@@ -11,7 +11,7 @@ class Base extends React.Component {
             title: '',
             siteName: '',
             logo: '',
-            globalStyle: '',
+            style: '',
         }
 
         if (this.props.template) {
@@ -19,11 +19,16 @@ class Base extends React.Component {
                 title: this.props.template.config.title,
                 siteName: this.props.template.config.siteName,
                 logo: this.props.template.config.logo,
-                globalStyle: this.props.template.config.globalStyle,
+                style: this.props.template.config.style,
             }            
         }
 
         this.changeInput = this.changeInput.bind(this)
+        this.save = this.save.bind(this)
+    }
+
+    save () {
+        
     }
 
     changeInput (event) {

@@ -3,7 +3,7 @@
         "title": "Aline Moura",
         "siteName": "Aline Moura - sistema",
         "logo": "/media/arts/logo.png",
-        "globalStyle": {}
+        "style": {}
     },
     "components": {
         "header": {
@@ -168,57 +168,45 @@
                 },
                 {
                     "type": "Accordion",
+                    "style": {},
                     "content": [
                         {
                             "question": "Como podemos te ajudar?",
-                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo.",
-                            "style": {
-                                "textAlign": "justify"
-                            }
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo."
                         },
                         {
                             "question": "O que precisas?",
-                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo.",
-                            "style": {
-                                "textAlign": "justify"
-                            }
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo."
                         },
                         {
                             "question": "O que queres saber?",
-                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo.",
-                            "style": {
-                                "textAlign": "justify"
-                            }
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo."
                         }
-                    ],
-                    "style": {}
+                    ]
                 },
                 {
                     "type": "Testimonials",
+                    "style": {},
                     "content": [
                         {
                             "name": "Bia",
                             "img": "/media/avatar.png",
                             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. 1",
-                            "iframe": "",
-                            "style": {}
+                            "iframe": ""
                         },
                         {
                             "name": "Maria joaquina",
                             "img": "/media/avatar.png",
                             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. 2",
-                            "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo",
-                            "style": {}
+                            "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo"
                         },
                         {
                             "name": "Clara",
                             "img": "/media/avatar.png",
                             "text": "",
-                            "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo",
-                            "style": {}
+                            "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo"
                         }
-                    ],
-                    "style": {}
+                    ]
                 }
             ]
         },

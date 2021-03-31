@@ -1,5 +1,6 @@
 import React from 'react'
 import UploadableMedia from "./UploadableMedia";
+import Stylist from "./Stylist";
 
 class Base extends React.Component {
 
@@ -26,7 +27,13 @@ class Base extends React.Component {
         this.changeInputLink = this.changeInputLink.bind(this)
         this.addItem = this.addItem.bind(this)
         this.removeItem = this.removeItem.bind(this)
+        this.save = this.save.bind(this)
     }
+
+    save () {
+        
+    }
+
 
     changeInput (event) {
         const target = event.target;
@@ -92,7 +99,7 @@ class Base extends React.Component {
 
         return (
             <section>
-                <h1 className="title-content">Configurações Genéricas</h1>
+                <h1 className="title-content">Configurações Genéricas <Stylist /></h1>
                 <br />
                 <label>Título da Pagina</label>
                 <input type="text" placeholder="Título da Pagina" name="title" value={this.state.title} onChange={this.changeInput} />
@@ -129,7 +136,7 @@ class Base extends React.Component {
                     </div>
                 ))}
 
-                <h1 className="title-content">Imagens da primeira galeria</h1>
+                <h1 className="title-content">Imagens da primeira galeria <Stylist /></h1>
                 <button className="add" onClick={() => this.addItem("aboveTheFold")}>Adicionar</button>
                 {this.state.aboveTheFold.length == 0 && <p>Sem Imagens</p>}
                 {this.state.aboveTheFold.map((item, key) => {

@@ -1,4 +1,5 @@
 import React from 'react'
+import Stylist from "./Stylist";
 
 class Base extends React.Component {
 
@@ -34,6 +35,10 @@ class Base extends React.Component {
         this.changeInput = this.changeInput.bind(this)
     }
 
+    save () {
+        
+    }
+
     changeInput (event) {
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -48,7 +53,7 @@ class Base extends React.Component {
         console.log(this.state);
         return (
             <section>
-                <h3>Rodapé</h3>
+                <h3>Rodapé <Stylist /></h3>
                 <table>
                     <tbody>
                         <tr>
