@@ -1,5 +1,6 @@
 import React from 'react'
 import Stylist from "./Stylist";
+import axios from 'axios';
 
 class Base extends React.Component {
 

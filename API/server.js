@@ -8,6 +8,11 @@ const filePath = isDev ? '../public/template/template.json' : '../build/template
 http.createServer(function (req, res) {
     const urlParsed = url.parse(req.url, true)
 
+    res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('Access-Control-Request-Method', '*');
+	res.setHeader('Access-Control-Allow-Methods', '*');
+	res.setHeader('Access-Control-Allow-Headers', '*');
+
     if (urlParsed.pathname == '/upload') {
         res.writeHead(200, {'Content-Type': 'application/json'});
         res.write(JSON.stringify({"status":"OK"}));

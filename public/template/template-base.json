@@ -2,12 +2,14 @@
     "config": {
         "title": "Aline Moura",
         "siteName": "Aline Moura - sistema",
-        "logo": "media/vazio.png",
-        "globalStyle": {}
+        "logo": "/media/arts/logo.png",
+        "style": {}
     },
     "components": {
         "header": {
-            "style": {"backgroundColor":"rgb(231, 119, 143)"},
+            "style": {
+                "backgroundColor": "rgb(231, 119, 143)"
+            },
             "nav": {
                 "title": "Aline Moura",
                 "hideOnScroll": true,
@@ -39,14 +41,14 @@
                         {
                             "title": "teste",
                             "subtitle": "teste 2",
-                            "imgPath": "media/arts/slideshows 1a.jpg",
+                            "imgPath": "/media/arts/slideshows 1a.jpg",
                             "link": "####",
                             "style": {}
                         },
                         {
                             "title": "teste",
                             "subtitle": "teste 2",
-                            "imgPath": "media/arts/slideshows 1b.jpg",
+                            "imgPath": "/media/arts/slideshows 1b.jpg",
                             "link": "####",
                             "style": {}
                         }
@@ -66,50 +68,66 @@
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
-                            "link": "####",
-                            "img": "media/arts/390 x 260 1.jpg"
+                            "link": "/course/0",
+                            "img": "/media/arts/390 x 260 1.jpg",
+                            "description": "",
+                            "isClass": false
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
-                            "link": "",
-                            "img": "media/arts/390 x 260 2.jpg"
+                            "link": "/course/1",
+                            "img": "/media/arts/390 x 260 2.jpg",
+                            "description": "",
+                            "isClass": false
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
-                            "link": "####",
-                            "img": "media/arts/390 x 260 3.jpg"
+                            "link": "/course/2",
+                            "img": "/media/arts/390 x 260 3.jpg",
+                            "description": "",
+                            "isClass": false
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
-                            "link": "####",
-                            "img": "media/arts/390 x 260 4.jpg"
+                            "link": "/course/3",
+                            "img": "/media/arts/390 x 260 4.jpg",
+                            "description": "",
+                            "isClass": false
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
-                            "link": "####",
-                            "img": "media/arts/390 x 260 5.jpg"
+                            "link": "/course/4",
+                            "img": "/media/arts/390 x 260 5.jpg",
+                            "description": "",
+                            "isClass": false
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
-                            "link": "####",
-                            "img": "media/arts/390 x 260 6.jpg"
+                            "link": "/course/5",
+                            "img": "/media/arts/390 x 260 6.jpg",
+                            "description": "",
+                            "isClass": false
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
-                            "link": "####",
-                            "img": "media/arts/390 x 260 7.jpg"
+                            "link": "/course/6",
+                            "img": "/media/arts/390 x 260 7.jpg",
+                            "description": "",
+                            "isClass": false
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
-                            "link": "####",
-                            "img": "media/arts/390 x 260 8.jpg"
+                            "link": "/course/7",
+                            "img": "/media/arts/390 x 260 8.jpg",
+                            "description": "",
+                            "isClass": false
                         }
                     ]
                 },
@@ -119,32 +137,32 @@
                     "caption": "text",
                     "content": [
                         {
-                            "img": "media/arts/slideshows 1a.jpg",
+                            "img": "/media/arts/slideshows 1a.jpg",
                             "link": "####",
                             "legend": "Este é um curso que pode ser feito"
                         },
                         {
-                            "img": "media/arts/slideshows 1b.jpg",
+                            "img": "/media/arts/slideshows 1b.jpg",
                             "link": "####",
                             "legend": "Este é um curso que pode ser feito"
                         },
                         {
-                            "img": "media/arts/slideshows 1a.jpg",
+                            "img": "/media/arts/slideshows 1a.jpg",
                             "link": "####",
                             "legend": "Este é um curso que pode ser feito"
                         },
                         {
-                            "img": "media/arts/slideshows 1b.jpg",
+                            "img": "/media/arts/slideshows 1b.jpg",
                             "link": "####",
                             "legend": "Este é um curso que pode ser feito"
                         },
                         {
-                            "img": "media/arts/slideshows 1a.jpg",
+                            "img": "/media/arts/slideshows 1a.jpg",
                             "link": "####",
                             "legend": "Este é um curso que pode ser feito"
                         },
                         {
-                            "img": "media/arts/slideshows 1b.jpg",
+                            "img": "/media/arts/slideshows 1b.jpg",
                             "link": "####",
                             "legend": "Este é um curso que pode ser feito"
                         }
@@ -152,74 +170,65 @@
                 },
                 {
                     "type": "Accordion",
+                    "style": {},
                     "content": [
                         {
                             "question": "Como podemos te ajudar?",
-                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo.",
-                            "style": {
-                                "textAlign": "justify"
-                            }
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo."
                         },
                         {
                             "question": "O que precisas?",
-                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo.",
-                            "style": {
-                                "textAlign": "justify"
-                            }
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo."
                         },
                         {
                             "question": "O que queres saber?",
-                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo.",
-                            "style": {
-                                "textAlign": "justify"
-                            }
+                            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo."
                         }
-                    ],
-                    "style": {}
+                    ]
                 },
                 {
                     "type": "Testimonials",
+                    "style": {},
                     "content": [
                         {
                             "name": "Bia",
                             "img": "/media/avatar.png",
                             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. 1",
-                            "iframe": "",
-                            "style": {}
+                            "iframe": ""
                         },
                         {
                             "name": "Maria joaquina",
                             "img": "/media/avatar.png",
                             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. 2",
-                            "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo",
-                            "style": {}
+                            "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo"
                         },
                         {
                             "name": "Clara",
                             "img": "/media/avatar.png",
                             "text": "",
-                            "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo",
-                            "style": {}
+                            "iframe": "https://www.youtube.com/embed/WXyLdg4mJxo"
                         }
-                    ],
-                    "style": {}
+                    ]
                 }
             ]
         },
         "footer": {
-            "style": {"backgroundColor":"rgb(231, 119, 143)"},
+            "style": {
+                "backgroundColor": "rgb(231, 119, 143)"
+            },
             "content": {
-                "text1": "teste1232132131",
-                "text2": "teste",
-                "text3": "teste",
-                "text4": "teste",
-                "text5": "teste",
-                "text6": "teste",
-                "text7": "teste",
-                "text8": "teste",
-                "text9": "teste",
-                "text10": "teste"
-            }
+                "text1": "Informações",
+                "text2": "teste 2",
+                "text3": "teste 3",
+                "text4": "teste 4",
+                "text5": "teste 5",
+                "link2": "teste",
+                "link3": "teste",
+                "link4": "teste",
+                "link5": "teste"
+            },
+            "facebook": "https://www.facebook.com/alinemouratl",
+            "instagram": "https://www.instagram.com/alinemouratl"
         }
     }
 }

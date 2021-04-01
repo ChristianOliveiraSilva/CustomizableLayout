@@ -7,7 +7,9 @@
     },
     "components": {
         "header": {
-            "style": {"backgroundColor":"rgb(231, 119, 143)"},
+            "style": {
+                "backgroundColor": "rgb(231, 119, 143)"
+            },
             "nav": {
                 "title": "Aline Moura",
                 "hideOnScroll": true,
@@ -211,7 +213,9 @@
             ]
         },
         "footer": {
-            "style": {"backgroundColor":"rgb(231, 119, 143)"},
+            "style": {
+                "backgroundColor": "rgb(231, 119, 143)"
+            },
             "content": {
                 "text1": "Informações",
                 "text2": "teste 2",
@@ -223,8 +227,8 @@
                 "link4": "teste",
                 "link5": "teste"
             },
-            "facebook":"https://www.facebook.com/alinemouratl",
-            "instagram":"https://www.instagram.com/alinemouratl"
+            "facebook": "https://www.facebook.com/alinemouratl",
+            "instagram": "https://www.instagram.com/alinemouratl"
         }
     }
 }
