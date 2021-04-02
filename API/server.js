@@ -15,13 +15,12 @@ http.createServer(function (req, res) {
 
     if (urlParsed.pathname == '/upload') {
         res.writeHead(200, {'Content-Type': 'application/json'});
-        res.write(JSON.stringify({"status":"OK"}));
+        res.write(JSON.stringify({"status":"is not working yet"}));
         res.end();
         return false;
     }
 
-
-    if (urlParsed.pathname != '/') {
+    if (urlParsed.pathname != '/exporter') {
         res.writeHead(200, {'Content-Type': 'application/json'});
         res.write(JSON.stringify({"error":"404"}));
         res.end();
@@ -32,9 +31,9 @@ http.createServer(function (req, res) {
         fs.readFile(filePath, 'utf8', function(err, data) {
             if (err) throw err;
             let obj = JSON.parse(data);
-            
-            // fazer as mudanças
-            obj = changeJSON(obj)
+            const newObj = JSON.parse(urlParsed.query.obj)
+
+            obj = changeJSON(obj, newObj)
 
             // salvar
             fs.writeFile(filePath, JSON.stringify(obj, null, 4), function (err) {
@@ -55,15 +54,10 @@ http.createServer(function (req, res) {
 }).listen(3001);
 
 
-function changeJSON(obj) {
-    const path = 'config/title'
-    const struct = path.split('/')
-    const value = 'banana'
-    
-    obj2 = buildRecursiveObject(struct, value)
-    // let merged = mergeRecursive(obj, obj2)
-    
-    return obj
+function changeJSON(obj, newObj) {
+    let merged = mergeRecursive(obj, newObj)
+   
+    return merged
 }
 
 function mergeRecursive(obj1, obj2) {
@@ -79,18 +73,4 @@ function mergeRecursive(obj1, obj2) {
         }
     }
     return obj1;
-}
-
-function buildRecursiveObject(struct, value) {
-    let obj = {}, obj1 = {}
-
-    console.log(struct);
-
-    for (let index = 0; index < struct.length; index++) {
-        const element = struct[index];
-        obj[element] = value
-    }
-
-    console.log(obj);
-    return obj;
 }

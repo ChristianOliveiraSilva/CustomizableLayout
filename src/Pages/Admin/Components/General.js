@@ -1,7 +1,8 @@
 import React from 'react'
 import UploadableMedia from "./UploadableMedia";
 import Stylist from "./Stylist";
-import axios from 'axios';
+import call, { exporter } from '../../../Helper/Caller';
+
 
 class Base extends React.Component {
 
@@ -28,21 +29,8 @@ class Base extends React.Component {
         this.save = this.save.bind(this)
     }
 
-    save () {
-        axios.get('localhost:3001/', {
-            // headers: {                  
-            //     "Access-Control-Allow-Origin": "*",
-            //     "Access-Control-Allow-Headers": "Authorization", 
-            //     "Access-Control-Allow-Methods": "GET, POST, OPTIONS, PUT, PATCH, DELETE" ,
-            //     "Content-Type": "application/json;charset=UTF-8"                   
-            // }
-        })
-        .then(function (response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-            alert(error);
-        });
+    save () {        
+        exporter({config: { title: 'adoro'}})
     }
 
     changeInput (event) {
