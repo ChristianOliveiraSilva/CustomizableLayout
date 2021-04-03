@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-function doQueryString (data) {
+function buildQueryString (data) {
 
     if (typeof data === "string") {
         return data;
@@ -17,7 +17,7 @@ function call(url, data, success, error) {
     }
 
     const path = 'http://localhost:3001/'
-    const finalUrl = path + url + "?" + doQueryString(data)
+    const finalUrl = path + url + "?" + buildQueryString(data)
 
     if (!success) {
         success = success => console.log(success)

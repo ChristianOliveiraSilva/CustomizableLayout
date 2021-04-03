@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const url = require('url');
+const formidable = require('formidable');
 
 const isDev = true
 const filePath = isDev ? '../public/template/template.json' : '../build/template/template.json'  
@@ -12,16 +13,15 @@ http.createServer(function (req, res) {
 	res.setHeader('Access-Control-Request-Method', '*');
 	res.setHeader('Access-Control-Allow-Methods', '*');
 	res.setHeader('Access-Control-Allow-Headers', '*');
+	res.setHeader('Content-Type', 'application/json');
 
     if (urlParsed.pathname == '/upload') {
-        res.writeHead(200, {'Content-Type': 'application/json'});
         res.write(JSON.stringify({"status":"is not working yet"}));
         res.end();
         return false;
     }
 
     if (urlParsed.pathname != '/exporter') {
-        res.writeHead(200, {'Content-Type': 'application/json'});
         res.write(JSON.stringify({"error":"404"}));
         res.end();
         return false;
@@ -39,7 +39,6 @@ http.createServer(function (req, res) {
             fs.writeFile(filePath, JSON.stringify(obj, null, 4), function (err) {
                 if (err) throw err;
 
-                res.writeHead(200, {'Content-Type': 'application/json'});
                 res.write(JSON.stringify({"status":"OK"}));
                 res.end();
             });
@@ -56,7 +55,7 @@ http.createServer(function (req, res) {
 
 function changeJSON(obj, newObj) {
     let merged = mergeRecursive(obj, newObj)
-   
+     
     return merged
 }
 

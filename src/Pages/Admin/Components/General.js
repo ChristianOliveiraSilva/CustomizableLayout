@@ -1,7 +1,7 @@
 import React from 'react'
 import UploadableMedia from "./UploadableMedia";
 import Stylist from "./Stylist";
-import call, { exporter } from '../../../Helper/Caller';
+import { exporter } from '../../../Helper/Caller';
 
 
 class Base extends React.Component {
@@ -29,8 +29,9 @@ class Base extends React.Component {
         this.save = this.save.bind(this)
     }
 
-    save () {        
-        exporter({config: { title: 'adoro'}})
+    save () {
+        const {siteName, title} = this.state
+        exporter({config: { siteName, title }})
     }
 
     changeInput (event) {

@@ -1,7 +1,7 @@
 {
     "config": {
         "title": "Aline Moura",
-        "siteName": "Aline Moura - sistema",
+        "siteName": "Aline Moura",
         "logo": "/media/arts/logo.png",
         "style": {}
     },
@@ -219,9 +219,9 @@
             "content": {
                 "text1": "Informações",
                 "text2": "teste 2",
-                "text3": "teste 3",
+                "text3": "teste 1",
                 "text4": "teste 4",
-                "text5": "teste 5",
+                "text5": "teste 51",
                 "link2": "teste",
                 "link3": "teste",
                 "link4": "teste",

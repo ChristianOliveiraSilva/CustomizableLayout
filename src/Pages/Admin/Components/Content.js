@@ -1,7 +1,8 @@
 import React from 'react'
 import UploadableMedia from "./UploadableMedia";
 import Stylist from "./Stylist";
-import axios from 'axios';
+import { exporter } from '../../../Helper/Caller';
+
 
 class Base extends React.Component {
 
