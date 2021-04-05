@@ -33,8 +33,6 @@ http.createServer(function (req, res) {
 
     req.on('end', () => {
         body = parse(body)
-        console.log(body);
-        console.log(JSON.parse(body.obj));
 
         if (urlParsed.pathname != '/exporter') {
             res.write(JSON.stringify({"error":"404"}));

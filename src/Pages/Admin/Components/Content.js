@@ -22,20 +22,12 @@ class Base extends React.Component {
         this.changeInput = this.changeInput.bind(this)
         this.addItem = this.addItem.bind(this)
         this.removeItem = this.removeItem.bind(this)
+        this.save = this.save.bind(this)
     }
 
     save () {
-        
-    }
-
-    changeInput (event) {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
-    
-        this.setState({
-          [name]: value
-        });
+        const components = this.state.components
+        exporter({components: {mainContent: {components: components}}})
     }
 
     addItem (component) {
@@ -65,9 +57,7 @@ class Base extends React.Component {
                 value = {
                     question: "",
                     text: "",
-                    style: {
-                        "textAlign": "justify"
-                    }                
+                    style: {}                
                 }  
                 break;
             case "testimonials":
@@ -101,6 +91,25 @@ class Base extends React.Component {
         })
     }
 
+    changeInput (event, idComponent, key) {
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
+
+        let components = this.state.components
+
+        if (typeof key !== 'undefined') {
+            console.log();
+            components[idComponent].content[key][name] = value
+        } else {
+            components[idComponent][name] = value
+        }
+    
+        this.setState({
+            components: components
+        });
+    }
+
     render() {
         if (!this.state.components) {
             return <p>Erro ao carregar o component</p>;
@@ -117,10 +126,10 @@ class Base extends React.Component {
                 <h1 className="title-content">Galeria do portfólio <Stylist /></h1>
 
                 <label>Título da Galeria</label>
-                <input type="text" placeholder="Título da Galeria" name="title" value={portfolioGallery.title} onChange={this.changeInput} />
+                <input type="text" placeholder="Título da Galeria" name="title" value={portfolioGallery.title} onChange={(e) => this.changeInput(e, 0)} />
 
                 <label>SubTítulo da Galeria</label>
-                <input type="text" placeholder="SubTítulo da Galeria" name="SubTitle" value={portfolioGallery.subtitle} onChange={this.changeInput} />
+                <input type="text" placeholder="SubTítulo da Galeria" name="subtitle" value={portfolioGallery.subtitle} onChange={(e) => this.changeInput(e, 0)} />
 
                 <h3 className="">Imagens do portfólio</h3>
                 <button className="add" onClick={() => this.addItem("portfolioGallery")}>Adicionar</button>
@@ -130,11 +139,17 @@ class Base extends React.Component {
                         <div key={key} className="content-item">
                             <button className="remove" onClick={() => this.removeItem(0, key)}>Remover</button>
                             
-                            <label>Título desta Imagem</label>
-                            <input type="text" placeholder="Título da IMG" name="Title" value={portfolioGallery.subtitle} onChange={this.changeInput} />
+                            <label>Título deste Curso</label>
+                            <input type="text" placeholder="Título do curso" name="title" value={item.title} onChange={(e) => this.changeInput(e, 0, key)} />
                             
-                            <label>SubTítulo desta Imagem</label>
-                            <input type="text" placeholder="SubTítulo da IMG" name="SubTitle" value={portfolioGallery.subtitle} onChange={this.changeInput} />
+                            <label>SubTítulo deste Curso</label>
+                            <input type="text" placeholder="SubTítulo do curso" name="subtitle" value={item.subtitle} onChange={(e) => this.changeInput(e, 0, key)} />
+                            
+                            <label>Descrição deste Curso</label>
+                            <input type="text" placeholder="Descrição deste Curso" name="description" value={item.description} onChange={(e) => this.changeInput(e, 0, key)} />
+
+                            <label>Link deste Curso <small>(cuidado ao alterar os links)</small></label>
+                            <input type="text" placeholder="Link deste Curso" name="link" value={item.link} onChange={(e) => this.changeInput(e, 0, key)} />
 
                             <UploadableMedia img={item.img} item={key} component="PortfolioGallery" />
                         </div>
@@ -149,10 +164,10 @@ class Base extends React.Component {
                         <div key={key} className="content-item">
                             <button className="remove" onClick={() => this.removeItem(1, key)}>Remover</button>
                             <label>Legenda</label>
-                            <input type="text" placeholder="Texto" name="legend" value={item.legend} onChange={this.changeInput} />
+                            <input type="text" placeholder="Texto" name="legend" value={item.legend} onChange={(e) => this.changeInput(e, 1, key)} />
 
                             <label>link</label>
-                            <input type="text" placeholder="link" name="question" value={item.link} onChange={this.changeInput} />
+                            <input type="text" placeholder="link" name="link" value={item.link} onChange={(e) => this.changeInput(e, 1, key)} />
 
                             <UploadableMedia img={item.img} item={key} component="SlideshowGallery" />
                         </div>
@@ -167,10 +182,10 @@ class Base extends React.Component {
                         <div key={key} className="content-item">
                             <button className="remove" onClick={() => this.removeItem(2, key)}>Remover</button>
                             <label>Questão</label>
-                            <input type="text" placeholder="Questão" name="question" value={item.question} onChange={this.changeInput} />
+                            <input type="text" placeholder="Questão" name="question" value={item.question} onChange={(e) => this.changeInput(e, 2, key)} />
                         
                             <label>Texto</label>
-                            <input type="text" placeholder="Texto" name="text" value={item.text} onChange={this.changeInput} />
+                            <input type="text" placeholder="Texto" name="text" value={item.text} onChange={(e) => this.changeInput(e, 2, key)} />
                         </div>
                     ))
                 }
@@ -183,14 +198,14 @@ class Base extends React.Component {
                         <div key={key} className="content-item">
                             <button className="remove" onClick={() => this.removeItem(3, key)}>Remover</button>
                             <label>Nome</label>
-                            <input type="text" placeholder="Nome" name="name" value={item.name} onChange={this.changeInput} />
+                            <input type="text" placeholder="Nome" name="name" value={item.name} onChange={(e) => this.changeInput(e, 3, key)} />
                             <UploadableMedia img={item.img} item={key} component="Testimonials" />
                         
                             <label>Texto</label>
-                            <input type="text" placeholder="Texto" name="text" value={item.text} onChange={this.changeInput} />
+                            <input type="text" placeholder="Texto" name="text" value={item.text} onChange={(e) => this.changeInput(e, 3, key)} />
                         
                             <label>Youtube link</label>
-                            <input type="text" placeholder="Youtube link" name="iframe" value={item.iframe} onChange={this.changeInput} />
+                            <input type="text" placeholder="Youtube link" name="iframe" value={item.iframe} onChange={(e) => this.changeInput(e, 3, key)} />
                         </div>
                     ))
                 }  

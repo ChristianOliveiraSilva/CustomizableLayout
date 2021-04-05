@@ -68,73 +68,64 @@
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "description": "",
                             "link": "/course/0",
-                            "img": "/media/arts/390 x 260 1.jpg",
-                            "description": "",
-                            "isClass": false
+                            "img": "/media/arts/390 x 260 1.jpg"
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "description": "",
                             "link": "/course/1",
-                            "img": "/media/arts/390 x 260 2.jpg",
-                            "description": "",
-                            "isClass": false
+                            "img": "/media/arts/390 x 260 2.jpg"
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "description": "",
                             "link": "/course/2",
-                            "img": "/media/arts/390 x 260 3.jpg",
-                            "description": "",
-                            "isClass": false
+                            "img": "/media/arts/390 x 260 3.jpg"
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "description": "",
                             "link": "/course/3",
-                            "img": "/media/arts/390 x 260 4.jpg",
-                            "description": "",
-                            "isClass": false
+                            "img": "/media/arts/390 x 260 4.jpg"
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "description": "",
                             "link": "/course/4",
-                            "img": "/media/arts/390 x 260 5.jpg",
-                            "description": "",
-                            "isClass": false
+                            "img": "/media/arts/390 x 260 5.jpg"
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "description": "",
                             "link": "/course/5",
-                            "img": "/media/arts/390 x 260 6.jpg",
-                            "description": "",
-                            "isClass": false
+                            "img": "/media/arts/390 x 260 6.jpg"
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
+                            "description": "",
                             "link": "/course/6",
-                            "img": "/media/arts/390 x 260 7.jpg",
-                            "description": "",
-                            "isClass": false
+                            "img": "/media/arts/390 x 260 7.jpg"
                         },
                         {
                             "title": "Tiara xxxx",
                             "subtitle": "Esta tiara é feita de metal, um arco e tecido",
-                            "link": "/course/7",
-                            "img": "/media/arts/390 x 260 8.jpg",
                             "description": "",
-                            "isClass": false
+                            "link": "/course/7",
+                            "img": "/media/arts/390 x 260 8.jpg"
                         }
                     ]
                 },
                 {
                     "type": "SlideshowGallery",
                     "style": {},
-                    "caption": "text",
                     "content": [
                         {
                             "img": "/media/arts/slideshows 1a.jpg",
@@ -177,7 +168,7 @@
                             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo."
                         },
                         {
-                            "question": "O que precisas?",
+                            "question": "O que precisas? asdsdasdasd",
                             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut dignissim turpis, eu auctor nisl. Proin tincidunt nibh a interdum finibus. Morbi vehicula leo bibendum cursus rhoncus. In sagittis urna nec sem finibus vehicula ut eu justo."
                         },
                         {
@@ -221,7 +212,7 @@
                 "text2": "teste 2",
                 "text3": "teste 1",
                 "text4": "teste 4",
-                "text5": "teste 51",
+                "text5": "teste 511",
                 "link2": "teste",
                 "link3": "teste",
                 "link4": "teste",
