@@ -2,6 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const url = require('url');
 const formidable = require('formidable');
+const { parse } = require('querystring');
 
 const isDev = true
 const filePath = isDev ? '../public/template/template.json' : '../build/template/template.json'  
@@ -15,41 +16,55 @@ http.createServer(function (req, res) {
 	res.setHeader('Access-Control-Allow-Headers', '*');
 	res.setHeader('Content-Type', 'application/json');
 
+    if (req.method !== 'POST') {
+        res.end(JSON.stringify({"error":"405"}));
+    }
+    let body = '';
+
     if (urlParsed.pathname == '/upload') {
         res.write(JSON.stringify({"status":"is not working yet"}));
         res.end();
         return false;
     }
 
-    if (urlParsed.pathname != '/exporter') {
-        res.write(JSON.stringify({"error":"404"}));
-        res.end();
-        return false;
-    }
-    
-    try {
-        fs.readFile(filePath, 'utf8', function(err, data) {
-            if (err) throw err;
-            let obj = JSON.parse(data);
-            const newObj = JSON.parse(urlParsed.query.obj)
+    req.on('data', chunk => {
+        body += chunk.toString();
+    });
 
-            obj = changeJSON(obj, newObj)
+    req.on('end', () => {
+        body = parse(body)
+        console.log(body);
+        console.log(JSON.parse(body.obj));
 
-            // salvar
-            fs.writeFile(filePath, JSON.stringify(obj, null, 4), function (err) {
+        if (urlParsed.pathname != '/exporter') {
+            res.write(JSON.stringify({"error":"404"}));
+            res.end();
+            return false;
+        }
+        
+        try {
+            fs.readFile(filePath, 'utf8', function(err, data) {
                 if (err) throw err;
+                let obj = JSON.parse(data);
+                const newObj = JSON.parse(body.obj)
 
-                res.write(JSON.stringify({"status":"OK"}));
-                res.end();
-            });
-        });    
-    } catch (error) {
-        console.log('ERROR', error);
+                obj = changeJSON(obj, newObj)
 
-        res.writeHead(500, {'Content-Type': 'application/json'});
-        res.write(JSON.stringify({"status":"ERROR"}));
-        res.end();
-    }
+                fs.writeFile(filePath, JSON.stringify(obj, null, 4), function (err) {
+                    if (err) throw err;
+
+                    res.write(JSON.stringify({"status":"OK"}));
+                    res.end();
+                });
+            });    
+        } catch (error) {
+            console.log('ERROR', error);
+
+            res.writeHead(500, {'Content-Type': 'application/json'});
+            res.write(JSON.stringify({"status":"ERROR"}));
+            res.end();
+        }
+    });
 }).listen(3001);
 
 
@@ -61,6 +76,9 @@ function changeJSON(obj, newObj) {
 
 function mergeRecursive(obj1, obj2) {
     for (var p in obj2) {
+        if (p == "img" || p == "style")
+            continue;
+
         try {
             if ( obj2[p].constructor == Object ) {
                 obj1[p] = mergeRecursive(obj1[p], obj2[p]);

@@ -9,6 +9,9 @@ class Login extends React.Component {
             password: ''
         }
 
+        this.login = 'boyd&MZu1@7Y'
+        this.password = '6$wu&A8Y3SGx'
+
         this.authenticate = this.authenticate.bind(this)
         this.changeInput = this.changeInput.bind(this)
     }
@@ -20,8 +23,11 @@ class Login extends React.Component {
     authenticate (event) {
         event.preventDefault()
 
-        if (this.state.login == 'admin' && this.state.password == 'admin') {
+        if (this.state.login == this.login && this.state.password == this.password) {
+            sessionStorage .logged = true
             this.props.changeLoggedState()
+        } else {
+            alert('Erro tente novamente')
         }
     
         this.setState({
@@ -43,7 +49,7 @@ class Login extends React.Component {
             <section className="login">
                 <form className="login" onSubmit={this.authenticate}>
                     <div className="imgcontainer">
-                        <img src="media/img_avatar2.png" alt="Avatar" className="avatar" />
+                        <img src="/media/avatar.png" alt="Avatar" className="avatar" />
                     </div>
 
                     <div className="container-login">

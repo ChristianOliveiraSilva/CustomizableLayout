@@ -70,7 +70,7 @@ class AboveTheFold extends React.Component {
             <section id="AboveTheFold" style={config.style} onMouseMove={this.hoverAbove}>
                 <div className="slideshow-container">
                     { config.component.slideshow.lead.map((page,key) =>{
-                        const {title, subtitle, imgPath, style, link} = page
+                        const {title, subtitle, img, style, link} = page
                         const show = this.state.slide == key ? {display: 'block'} : {}
                         const description = `${title}: ${subtitle}`
 
@@ -78,7 +78,7 @@ class AboveTheFold extends React.Component {
                             <div key={key} style={style, show} className="mySlides fade">
                                 <a href={link}>
                                     <div className="numbertext">{key+1} / {config.component.slideshow.lead.length}</div>
-                                    <img src={imgPath} alt={description} title={description} />
+                                    <img src={img} alt={description} title={description} />
                                     <div className="text" title={description}>{description}</div>
                                 </a>
                             </div>

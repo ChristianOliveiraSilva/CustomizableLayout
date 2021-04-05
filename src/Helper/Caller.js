@@ -1,14 +1,3 @@
-import axios from 'axios'
-
-
-function buildQueryString (data) {
-
-    if (typeof data === "string") {
-        return data;
-    }
-
-    return "obj="+JSON.stringify(data)
-}
 
 function call(url, data, success, error) {
 
@@ -17,23 +6,32 @@ function call(url, data, success, error) {
     }
 
     const path = 'http://localhost:3001/'
-    const finalUrl = path + url + "?" + buildQueryString(data)
+    const finalUrl = path + url
 
     if (!success) {
         success = success => console.log(success)
     }
 
     if (!error) {
-        error = err => console.error(err)
+        error = err => alert("Erro: alertar o criador do site: "+err)
     }
 
-    axios.post(finalUrl)
-    .then((s) => s.data.status == 200 ? success(s.data) : error(s))
-    .catch((e) => error(e))
+    let xhttp = new XMLHttpRequest()
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4){
+            if (this.status == 200)
+                success(JSON.parse(this.responseText))
+            else
+                error(JSON.parse(this.responseText))
+        }
+    }
+    xhttp.open("POST", finalUrl, true)
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send('obj='+JSON.stringify(data))
 }
 
 export function exporter(obj, success, error) {
     call('exporter', obj, success, error)
 }
 
-export default call;
+export default call

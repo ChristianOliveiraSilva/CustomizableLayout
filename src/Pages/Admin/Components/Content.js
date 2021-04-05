@@ -113,6 +113,7 @@ class Base extends React.Component {
 
         return (
             <section>
+                <h1>Gerir Conteúdo</h1>
                 <h1 className="title-content">Galeria do portfólio <Stylist /></h1>
 
                 <label>Título da Galeria</label>

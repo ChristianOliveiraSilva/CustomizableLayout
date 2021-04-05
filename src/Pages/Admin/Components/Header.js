@@ -33,7 +33,14 @@ class Base extends React.Component {
     }
 
     save () {
-        
+        const {title, hideOnScroll, links, aboveTheFold} = this.state
+        const nav = {title, hideOnScroll, links}
+        const header = {nav}
+        const leads = {component: { slideshow: {lead: aboveTheFold}}}
+        const components = {header, aboveTheFold: leads}
+
+        console.log({components});
+        exporter({components})
     }
 
 
@@ -47,15 +54,15 @@ class Base extends React.Component {
         });
     }
 
-    changeInputLink(event, id) {
+    changeInputLink(event, id, obj) {
         const target = event.target;
         const value = target.value;
 
-        let links = this.state.links
-        links[id] = {text: value, href: links[id].href}
+        let input = this.state[obj]
+        input[id] = Object.assign(input[id], {[target.name]: value});
 
         this.setState({
-            links: links
+            [obj]: input
         });
     }
 
@@ -67,16 +74,16 @@ class Base extends React.Component {
                 value = {
                     text: "",
                     href: ""
-                }                
+                }
                 break;
             case "aboveTheFold":
                 value = {
-                    title: "asdsad",
-                    subtitle: "asdasdsdsadsa 2",
-                    imgPath: "/media/vazio.png",
+                    title: "teste",
+                    subtitle: "teste",
+                    img: "/media/vazio.png",
                     link: "#",
                     style: {}
-                }                
+                }
                 break;
         }
 
@@ -98,16 +105,21 @@ class Base extends React.Component {
     }
 
     render() {
-
+        const fixedValues = `use:
+        #PortfolioGallery -> para galeria de cursos
+        #SlideshowGallery -> para slideshow de fotos
+        #Accordion -> para FAQ
+        #Testimonials -> para os testemunhos`;
         return (
             <section>
-                <h1 className="title-content">Configurações Genéricas <Stylist /></h1>
+                <h1 className="title-content">Cabeçalho <Stylist /></h1>
                 <br />
-                <label>Título da Pagina</label>
+                <label>Título do Menu</label>
                 <input type="text" placeholder="Título da Pagina" name="title" value={this.state.title} onChange={this.changeInput} />
 
+                <br /><br />
                 <label>Esconder menu ao rolar na Página?</label>
-                <input type="checkbox" name="hideOnScroll" value={this.state.hideOnScroll} onChange={this.changeInput} />
+                <input type="checkbox" name="hideOnScroll" checked={this.state.hideOnScroll} onChange={this.changeInput} />
                 <br />
 
                 <h1 className="title-content">Links do cabeçalho</h1>
@@ -116,6 +128,7 @@ class Base extends React.Component {
                 {this.state.links.map((item, key) => (
                     <div key={key} className="content-item">
                         <button className="remove" onClick={() => this.removeItem("links", key)}>Remover</button>
+                        <button className="remove" style={{backgroundColor: '#d9c466'}} onClick={() => alert(fixedValues)}>Ver valores fixos</button>
                         <table>
                             <tbody>
                                 <tr>
@@ -123,14 +136,13 @@ class Base extends React.Component {
                                         <p>Nome do link</p>
                                     </td>
                                     <td>
-                                        <input type="text" placeholder="Nome do link" name="text" value={item.text} onChange={(event) => this.changeInputLink(event, key)} />
+                                        <input type="text" placeholder="Nome do link" name="text" value={item.text} onChange={(event) => this.changeInputLink(event, key, "links")} />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Link</td>
                                     <td>
-                                        <input type="text" placeholder="Link" name="href" value={item.href} onChange={(event) => this.changeInputLink(event, key)} />
-                                        <small><span className="muted">{item.href}</span> Use esse codigo para conseguir linkar na pagina</small>
+                                        <input type="text" placeholder="Link" name="href" value={item.href} onChange={(event) => this.changeInputLink(event, key, "links")} />
                                     </td>
                                 </tr>
                             </tbody>
@@ -147,15 +159,15 @@ class Base extends React.Component {
                         <button className="remove" onClick={() => this.removeItem("aboveTheFold", key)}>Remover</button>
 
                         <label>Título da Pagina</label>
-                        <input type="text" placeholder="Título da Pagina" name="title" value={item.title} onChange={this.changeInput} />
+                        <input type="text" placeholder="Título da Pagina" name="title" value={item.title} onChange={(event) => this.changeInputLink(event, key, "aboveTheFold")} />
 
                         <label>Subtítulo da Pagina</label>
-                        <input type="text" placeholder="Subtítulo da Pagina" name="subtitle" value={item.subtitle} onChange={this.changeInput} />
+                        <input type="text" placeholder="Subtítulo da Pagina" name="subtitle" value={item.subtitle} onChange={(event) => this.changeInputLink(event, key, "aboveTheFold")} />
 
                         <label>link</label>
-                        <input type="text" placeholder="link" name="link" value={item.link} onChange={this.changeInput} />
+                        <input type="text" placeholder="link" name="link" value={item.link} onChange={(event) => this.changeInputLink(event, key, "aboveTheFold")} />
 
-                        <UploadableMedia img={item.imgPath} item={key} component="AboveTheFold" />
+                        <UploadableMedia img={item.img} item={key} component="AboveTheFold" />
                     </section>
                 )})}
 

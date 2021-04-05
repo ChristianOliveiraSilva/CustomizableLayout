@@ -8,7 +8,7 @@ class Admin extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            logged: false,
+            logged: sessionStorage.logged || false,
             template: {},
             error: ''
         }
@@ -33,12 +33,12 @@ class Admin extends React.Component {
     
     render() {
         // atenção essa parte sera mocakada
-        if (this.state.logged) { 
+        if (!this.state.logged) 
             return <Login changeLoggedState={this.authenticate}/>
-        }
-        if (this.state.error == '' && Object.values(this.state.template).length !== 0) {
+        
+        if (this.state.error == '' && Object.values(this.state.template).length !== 0)
             return <Configuration template={this.state.template} />
-        }
+        
         return <h1 className="error-system">{this.state.error}</h1>
     }
 }

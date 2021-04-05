@@ -1,7 +1,7 @@
 {
     "config": {
         "title": "Aline Moura",
-        "siteName": "Aline Moura - sistema",
+        "siteName": "Aline Moura",
         "logo": "/media/arts/logo.png",
         "style": {}
     },
@@ -41,14 +41,14 @@
                         {
                             "title": "teste",
                             "subtitle": "teste 2",
-                            "imgPath": "/media/arts/slideshows 1a.jpg",
+                            "img": "/media/arts/slideshows 1a.jpg",
                             "link": "####",
                             "style": {}
                         },
                         {
                             "title": "teste",
                             "subtitle": "teste 2",
-                            "imgPath": "/media/arts/slideshows 1b.jpg",
+                            "img": "/media/arts/slideshows 1b.jpg",
                             "link": "####",
                             "style": {}
                         }
@@ -217,11 +217,11 @@
                 "backgroundColor": "rgb(231, 119, 143)"
             },
             "content": {
-                "text1": "Informações",
+                "text1": "Informações11",
                 "text2": "teste 2",
-                "text3": "teste 3",
+                "text3": "teste 1",
                 "text4": "teste 4",
-                "text5": "teste 5",
+                "text5": "teste 51",
                 "link2": "teste",
                 "link3": "teste",
                 "link4": "teste",

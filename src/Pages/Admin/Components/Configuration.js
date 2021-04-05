@@ -10,7 +10,7 @@ class Configuration extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            content: 0
+            content: sessionStorage.page || 0
         }
 
         this.pages = [
@@ -30,6 +30,7 @@ class Configuration extends React.Component {
         this.setState({
             content: n
         })
+        sessionStorage.page = n
     }
 
     render() {
