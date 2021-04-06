@@ -54,7 +54,7 @@ class Base extends React.Component {
                 <input type="text" placeholder="Nome da Página" name="siteName" value={this.state.siteName} onChange={this.changeInput} />
 
                 <label>Logo da Página</label>
-                <UploadableMedia img={this.state.logo} item={0} component="logo" />
+                <UploadableMedia img={this.state.logo} component="logo" />
                 
                 <button className="btn-submit" onClick={this.save}>Salvar</button>
             </section>

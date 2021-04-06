@@ -9,7 +9,7 @@ class Base extends React.Component {
 
     constructor(props) {
         super(props)
-        alert(roles[5].value)
+
         this.state = {
             rules: roles,
             indexRule: null
@@ -41,7 +41,6 @@ class Base extends React.Component {
         const indexRule = this.state.indexRule
         const currentRule = indexRule != null ? allRules[allRules.findIndex((item) => item.id == indexRule)] : null
 
-        console.log(allRules[5].value);
         return (
             <section className="modal">
                 <section className="modal-content">

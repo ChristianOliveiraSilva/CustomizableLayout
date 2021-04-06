@@ -44,7 +44,7 @@ class Base extends React.Component {
 
         return (
             <span>
-                <img src={img} onClick={this.openModal} title={this.props.component}/>
+                <img src={img} style={{cursor: 'pointer', verticalAlign: 'bottom'}} onClick={this.openModal} title={this.props.component}/>
                 {this.state.show && <Modal closeModal={this.closeModal} />}
             </span>
         )

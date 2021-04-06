@@ -16,7 +16,6 @@ class Base extends React.Component {
     }
 
     changeInput (event) {
-        console.log(event.target.files);
         if (event.target.files && event.target.files[0]) {
             const file = new FileReader();
             file.onload = function(e) {
@@ -29,7 +28,7 @@ class Base extends React.Component {
             
             const formData = new FormData();
             formData.append("img", event.target.files[0]); 
-            formData.append("key", this.props.key); 
+            formData.append("key", this.props.item); 
             formData.append("component", this.props.component); 
 
             const ajax = new XMLHttpRequest();
@@ -39,7 +38,7 @@ class Base extends React.Component {
                 }
             }
 
-            ajax.open('POST',"localhost:3001",true);
+            ajax.open('POST', "http://localhost:3001/upload", true);
             ajax.send(formData);
         }
     }

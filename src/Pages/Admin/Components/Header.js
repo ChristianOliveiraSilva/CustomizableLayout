@@ -167,7 +167,7 @@ class Base extends React.Component {
                         <label>link</label>
                         <input type="text" placeholder="link" name="link" value={item.link} onChange={(event) => this.changeInputLink(event, key, "aboveTheFold")} />
 
-                        <UploadableMedia img={item.img} item={key} component="AboveTheFold" />
+                        <UploadableMedia img={item.img} item={key} component="aboveTheFold" />
                     </section>
                 )})}
 
