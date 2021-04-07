@@ -25,6 +25,11 @@ class Engine extends React.Component {
             document.head.appendChild(link);
         }
         link.href = config.logo
+        
+        config.fonts.map((item) => {
+            let head = document.head
+            head.innerHTML += item.replace(/\%26/g,"&") + "\n"            
+        })
     }
     
     render() {

@@ -31,7 +31,11 @@ function call(url, data, success, error) {
 }
 
 export function exporter(obj, success, error) {
-    call('exporter', obj, success, error)
+    if (JSON.stringify(obj).indexOf("&") !== -1) {
+        alert("Você não pode usar &")
+    } else {
+        call('exporter', obj, success, error)
+    }
 }
 
 export function stylize(obj, success, error) {
